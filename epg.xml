@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE tv SYSTEM "https://github.com/XMLTV/xmltv/raw/master/xmltv.dtd">
+<tv>
+  <programme start="20211228142900+0000" stop="20211228150000+0000" channel="russia-today">
+    <language>English</language>
+    <title lang="en">Boom Bust</title>
+    <desc lang="en">The host presents the latest business and finance news and discusses trends in the international share markets.</desc>
+    <category lang="en">Business &amp; Finance</category>
+    <icon src="https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/783516DFE21D4F5B9363CAEEAA9CB3B7619D5109T.jpg"/>
+  </programme>
+  <channel id="russia-today">
+    <display-name>Russia Today</display-name>
+    <display-name>48</display-name>
+    <icon src="https://d229kpbsb5jevy.cloudfront.net/tv/150/150/bnw/russia-today-white.png"/>
+  </channel>
+</tv>
