@@ -1,14 +1,16 @@
 
 from gevent import monkey
+
 monkey.patch_all()
 from itertools import chain
 from functools import partial
 from flask import Flask, Response, request, jsonify, abort, render_template
 
-from streamlink.stream.hls import HLSStream
-
+from streamlink.plugin.api.http_session import HTTPSession
 from streamlink.plugin.api import useragents
 from streamlink_cli.utils import JSONEncoder
+import unittest 
+from unittest.mock import patch
 from streamlink import NoPluginError, PluginError, StreamError, Streamlink, __version__ as streamlink_version
 from gevent.pywsgi import WSGIServer
 import logging
@@ -20,56 +22,73 @@ import os
 import json
 import time
 import threading
-streamlink_session = Streamlink()
+
 from datetime import timezone, datetime, timedelta
 from urllib.parse import urlparse, parse_qs
 
 from lxml import etree
 from lxml.cssselect import CSSSelector
-hosts = {}
-app = Flask(__name__)
-
-html_parser = etree.HTMLParser()
-cookies = dict(BoxId="***REMOVED***",
-               YuppflixToken="***REMOVED***")
 
 
-streamlink_session.set_plugin_option("yupptv","boxid",cookies["BoxId"])
-streamlink_session.set_plugin_option("yupptv","yuppflixtoken",cookies["YuppflixToken"])
-streamlink_session.set_option("hls-live-edge",1)
-
-playlist_file = "yupptv.m3u"
-xmltv_file = "epg.xml"
-
-logger = logging.getLogger()
-first_run=False
-XMLTV_DOCTYPE = '<!DOCTYPE tv SYSTEM "https://github.com/XMLTV/xmltv/raw/master/xmltv.dtd">'
-channel_urls = {}
 
 ## restore the streams from json
-YuppTV = streamlink_session.get_plugins()["yupptv"]
-yupptv_plugin = YuppTV("")
-
-yupptv_plugin.session.http.headers.update({"User-Agent": useragents.CHROME})
-yupptv_plugin.session.http.headers.update({"Origin": "https://www.yupptv.com"})
 all_streams = {}
 streams_file = "streams.json"
 if os.path.isfile(streams_file):
     json_file = open(streams_file)
     all_streams = json.load(json_file)
 
-@staticmethod
-def _override_encoding(res, **kwargs):
-    print("_override_encoding")
-    res.encoding = "utf-8"
+
+## init StreamLink
+class CachedHTTPSession(HTTPSession):
+    def request(self, method, url, *args, **kwargs):
+        # check if this is a request for the html page so we can directly return the manifest url if it's still valid
+        channel_regex = r'https?://(?:www\.)?yupptv\.com/channels/([a-z\-]+)/live'
+        match = re.match(channel_regex,url)
+        if match:
+            channel_name = match.group(1)
+            if(channel_name in all_streams and all_streams[channel_name]["expiry"] > datetime.now().timestamp()+600):
+                fakeResponse = Response()
+                fakeResponse.text = "streamUrl=[{src: \""+all_streams[channel_name]["url"]+"\" , title: '', description: ''}]"
+                return fakeResponse
+        return super().request(method, url, *args, **kwargs)
+
+    
+class CachedStreamlink(Streamlink):
+    def __init__(self, options=None):
+        super().__init__(options)
+        self.http = CachedHTTPSession()
+
+
+streamlink_session = CachedStreamlink()
+cookies = dict(BoxId="***REMOVED***",
+               YuppflixToken="***REMOVED***")
+
+streamlink_session.set_plugin_option("yupptv","boxid",cookies["BoxId"])
+streamlink_session.set_plugin_option("yupptv","yuppflixtoken",cookies["YuppflixToken"])
+streamlink_session.set_option("hls-live-edge",1)
+
+yupptv_plugin = streamlink_session.get_plugins()["yupptv"]("")
+yupptv_plugin.session.http.headers.update({"User-Agent": useragents.CHROME})
+yupptv_plugin.session.http.headers.update({"Origin": "https://www.yupptv.com"})
+
+
+## setup a few more things
+app = Flask(__name__)
+html_parser = etree.HTMLParser()
+playlist_file = "yupptv.m3u"
+xmltv_file = "epg.xml"
+first_run=False
+XMLTV_DOCTYPE = '<!DOCTYPE tv SYSTEM "https://github.com/XMLTV/xmltv/raw/master/xmltv.dtd">'
+
+## setup logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger()
+
 
 # https://stackoverflow.com/questions/3663450/remove-substring-only-at-the-end-of-string
 
 
-def rchop(s, suffix):
-    if suffix and s.endswith(suffix):
-        return s[:-len(suffix)]
-    return s
 
 
 MAX_FILE_AGE = 48*60*60
@@ -87,70 +106,66 @@ def _downloadFile(filename, url):
         open(filename, 'wb').write(r.content)
 
 
-def _get_stream(channel_name):
-    global all_streams
-    channel_streams = None
+# refresh the streams for a specific channel if they are outdated. Returns none if nothing was updated      
+def _refresh_streams(channel_name):
     if(channel_name not in all_streams or all_streams[channel_name]["expiry"] < datetime.now().timestamp()+600):
-        # todo: take this from the epg/channels crawler
-        page_url =          "https://www.yupptv.com/channels/"+channel_name+"/live"    
-        #stream_url = subprocess.check_output("streamlink --stream-url --yupptv-boxid=***REMOVED*** --yupptv-yuppflixtoken=***REMOVED*** \""+page_url+"\" ", shell=True).decode("utf-8").strip()
-        #if(stream_url == "None"):
-        #    stream_url = subprocess.check_output("streamlink --stream-url --yupptv-boxid=***REMOVED*** --yupptv-yuppflixtoken=***REMOVED*** \""+page_url+"\" best", shell=True).decode("utf-8").strip()
-        channel_streams = streamlink_session.streams(page_url )  
-        stream_url = channel_streams['best'].to_manifest_url()
-        if(stream_url == None):
-            stream_url = channel_streams['best'].url
-
-        # get expiry
-        parsed_uri = urlparse(stream_url)
-        params = parse_qs(parsed_uri.query)
-        expiry = -1
-        if("hdnts" in params):
-            hdnts = dict(s.split('=') for s in params["hdnts"][0].split("~"))
-            expiry = int(hdnts["exp"])
-        elif("hdntl" in params):
-            hdntl = dict(s.split('=') for s in params["hdntl"][0].split("~"))
-            expiry = int(hdntl["exp"])
-        elif ("e" in params):
-            expiry = int(params["e"][0])
-        else:
-            expiry = datetime.now().timestamp()+3600*24
-
-        # update streams
-        all_streams[channel_name] = {
-            "url": stream_url,
-            "streams":channel_streams,
-            "expiry": expiry
-        }
-
-        # persist streams in case the server get's restarted
-        print("%s - updated master playlist"%channel_name)
-        with open(streams_file, 'w') as outfile:
-            json.dump(all_streams, outfile, cls=JSONEncoder,sort_keys=True, indent=4)
+        logger.info("%s refresh streams"%channel_name)
+        return _get_streams(channel_name);
     else:
-        channel_streams = HLSStream.parse_variant_playlist(yupptv_plugin.session,
-                                                        all_streams[channel_name]["url"],
-                                                        hooks={"response": _override_encoding})
-       
-        print("%s - parsed variant playlist"%channel_name)
- 
+        logger.info("%s streams still current"%channel_name)
+        return None
+
+# get the streams for a specific channel
+def _get_streams(channel_name):
+    # todo: take this from the epg/channels crawler
+    page_url = "https://www.yupptv.com/channels/"+channel_name+"/live"  
+    channel_streams =   streamlink_session.streams(page_url)  
+    stream_url = channel_streams['best'].to_manifest_url()
+    if(stream_url == None):
+        stream_url = channel_streams['best'].url
+
+    # get expiry
+    parsed_uri = urlparse(stream_url)
+    params = parse_qs(parsed_uri.query)
+    expiry = -1
+    if("hdnts" in params):
+        hdnts = dict(s.split('=') for s in params["hdnts"][0].split("~"))
+        expiry = int(hdnts["exp"])
+    elif("hdntl" in params):
+        hdntl = dict(s.split('=') for s in params["hdntl"][0].split("~"))
+        expiry = int(hdntl["exp"])
+    elif ("e" in params):
+        expiry = int(params["e"][0])
+    else:
+        expiry = datetime.now().timestamp()+3600*24
+
+    # update streams
+    all_streams[channel_name] = {
+        "url": stream_url,
+        "streams":channel_streams,
+        "expiry": expiry
+    }
+
+    # persist streams in case the server get's restarted
+    logger.info("%s - updated master playlist"%channel_name)
+    with open(streams_file, 'w') as outfile:
+        json.dump(all_streams, outfile, cls=JSONEncoder,sort_keys=True, indent=4)
     return channel_streams
 
-def get_channel_url(channel_name):
-    return channel_urls[channel_name];
-
-def get_language(channel_name):
-
+def get_channel_language(channel_name):
     epg_file = "epg.json"
     epg = {}
     if os.path.isfile(epg_file):
         json_file = open(epg_file)
         epg = json.load(json_file)
-    return epg[channel_name]['language']
+    if channel_name in epg:
+        return epg[channel_name]['language']
+    else:
+        return ""
 
 
 
-def get_programme(channel_name,chanid):
+def get_epg_programme(channel_name,chanid):
     epg_file = "epg.json"
     epg = {}
     refreshed = False
@@ -179,7 +194,7 @@ def get_programme(channel_name,chanid):
     dummyTitle = "Program@"
     if(len(epg_data['Programs']) > 0 and epg_data['Programs'][0]['name'][0:len(dummyTitle)] != dummyTitle):
         programme = epg_data['Programs'][0]
-        print("Refreshing EPG for %s"%channel_name)
+        logger.info("Refreshing EPG for %s"%channel_name)
         # add programme tag
         programmeElem = etree.Element("programme")
 
@@ -267,8 +282,8 @@ def _data_refresh_loop():
                     last_index = int(paging_selector(
                         root)[0].get('data-last-index'))
 
-                    print("------------------")
-                    print(section + ": "+str(last_index), count, page)
+                    logger.info("------------------")
+                    logger.info("%s page %i, count %i, last index %i"%(section, page, count, last_index))
                     if(page == 0):
                         section_selector = CSSSelector('h1.section-heading')
                         section_name = section_selector(root)[0].text
@@ -287,13 +302,18 @@ def _data_refresh_loop():
                         img = img_selector(link)[0]
                         url = link.get('href')
                         logo = img.get('data-src')
+
+                        def rchop(s, suffix):
+                            if suffix and s.endswith(suffix):
+                                return s[:-len(suffix)]
+                            return s
                         display_name = rchop(img.get('alt'), ' Online')
                         if(available and display_name not in channels):
                             channels.append(display_name)
                             channelNo += 1
                             canonical_name = url[len(
                                 "https://www.yupptv.com/channels/"):-len("/live")]
-                            print(channelNo, canonical_name)
+                            logger.info("%i %s"%(channelNo, canonical_name))
 
                             channelElem = etree.Element("channel")
                             channelElem.set('id', canonical_name)
@@ -311,7 +331,7 @@ def _data_refresh_loop():
                             raw = open("tmp/"+filename, "r").read()
                             chanid = re.search('chanid = \'(\d+)\'', raw).group(1)
 
-                            language = get_language(canonical_name)
+                            language = get_channel_language(canonical_name)
                             playlist_line1 = "#EXTINF:-1 tvh-epg=\"disable\"  tvh-chnum=\"" + \
                                 str(channelNo)+"\" tvg-logo=\""+logo+"\" tvg-name=\""+canonical_name + \
                                 "\" group-title=\""+section_name+";"+language+"\", "+display_name
@@ -323,11 +343,12 @@ def _data_refresh_loop():
                         #  streamlink --hls-live-edge 1 --quiet --http-header Origin='https://www.yupptv.com'   "https://yuppirecloriginweb.akamaized.net/250920/colorsukhd/playlist.m3u8?hdnts=st=1640184036~exp=1640187636~acl=*~data=yuppTVCom_5_5893399_***REMOVED***_CH_81.17.17.187~hmac=a35cdb79b8c4ccaa5c9e50be868bb78274ff990f49b86742d806cb57fa4472c9" best
                             #stream_url = subprocess.check_output(['python3', '-m streamlink','--stream-url','--yupptv-boxid=***REMOVED***','--yupptv-yuppflixtoken=***REMOVED***',url],stderr=subprocess.STDOUT)
 
-                            #stream_url = _get_stream(canonical_name)
+                            _refresh_streams(canonical_name)
                         
-                            playlist_line2 = "pipe://python3 -m streamlink --stdout --quiet --yupptv-boxid=***REMOVED*** --yupptv-yuppflixtoken=***REMOVED*** "+url+" best"
+                            #playlist_line2 = "pipe://python3 -m streamlink --stdout --quiet --yupptv-boxid=***REMOVED*** --yupptv-yuppflixtoken=***REMOVED*** "+url+" best"
+                            playlist_line2 = "http://localhost:5005/video/yupptv/"+canonical_name
                             playlist_str += playlist_line1 + "\n" + playlist_line2 + "\n"
-                            programmeElem = get_programme(canonical_name,chanid)
+                            programmeElem = get_epg_programme(canonical_name,chanid)
                             if(programmeElem is not None or first_run):
                                 if programmeElem is not None:
                                     xmlTvRoot.append(programmeElem)
@@ -353,7 +374,7 @@ def _data_refresh_loop():
         with open(playlist_file, 'w') as f:
             f.write(playlist_str)
 
-        print('wait 60 seconds')
+        logger.info('wait 60 seconds')
         time.sleep(60)
         first_run = False
 
@@ -409,36 +430,22 @@ def read_stream(stream, prebuffer, chunk_size=8192):
         for data in stream_iterator:
                 yield data
     except OSError as err:
-        print(f"Error when reading from stream: {err}, exiting")
+        logger.info(f"Error when reading from stream: {err}, exiting")
         os.exit()
     finally:
         stream.close()
-        print("Stream ended")
+        logger.info("Stream ended")
 
 
 @app.route('/video/<provider>/<channel>')
 def video_feed(provider,channel):
-    print("got request for %s-%s"%(provider,channel))
-    #stream_url = _get_stream(channel,None)
-    #stream_url = "https://www.yupptv.com/channels/alai-balai/live"
-    #stream_url = "https://www.yupptv.com/channels/colors-uk/live"
-    #print(stream_url)
-    #streams = streamlink_session.streams(stream_url )  
-    streams = _get_stream(channel);
-    print(streams)  
+    logger.info("got request for %s-%s"%(provider,channel))
+    streams = _get_streams(channel);
     if('best' in streams):
         stream = streams['best']      
-    else:
-        #workaround as the restored streams aren't a Streams object but a OrderedDict
-        stream = streams[list(streams)[0]]
-    print(stream)  
+    logger.info(stream)  
     stream_fd, prebuffer = open_stream(stream)
     
-    def generate():
-       data = ""
-    #    while (data = fd.read(1024)):
-            
-    #    yield data
     return Response(read_stream(stream_fd, prebuffer), mimetype='video/unknown')
     
 if __name__ == '__main__':

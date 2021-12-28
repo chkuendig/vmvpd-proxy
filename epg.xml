@@ -1,16 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE tv SYSTEM "https://github.com/XMLTV/xmltv/raw/master/xmltv.dtd">
 <tv>
-  <programme start="20211228142900+0000" stop="20211228150000+0000" channel="russia-today">
-    <language>English</language>
-    <title lang="en">Boom Bust</title>
-    <desc lang="en">The host presents the latest business and finance news and discusses trends in the international share markets.</desc>
-    <category lang="en">Business &amp; Finance</category>
-    <icon src="https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/783516DFE21D4F5B9363CAEEAA9CB3B7619D5109T.jpg"/>
+  <programme start="20211228224500+0000" stop="20211228233000+0000" channel="tv9-news">
+    <language>Telugu</language>
+    <title lang="en">Super Prime Time</title>
+    <desc lang="en">The host sheds light on the latest socio-economic, political as well as sports updates and developments from across the world.</desc>
+    <category lang="en">News</category>
+    <icon src="https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/C3EB53309B2BD1573DC1B340398BF9FAC872B873S.jpg"/>
   </programme>
-  <channel id="russia-today">
-    <display-name>Russia Today</display-name>
-    <display-name>48</display-name>
-    <icon src="https://d229kpbsb5jevy.cloudfront.net/tv/150/150/bnw/russia-today-white.png"/>
+  <channel id="tv9-news">
+    <display-name>TV9 News</display-name>
+    <display-name>49</display-name>
+    <icon src="https://d229kpbsb5jevy.cloudfront.net/tv/150/150/bnw/TV9_Telugu_white_1.png"/>
   </channel>
 </tv>
