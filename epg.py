@@ -28,7 +28,11 @@ from urllib.parse import urlparse, parse_qs
 
 from lxml import etree
 from lxml.cssselect import CSSSelector
+from vmvpd_yupptv import vMVPD_YuppTV
 
+
+plugins = {}
+plugins["yupptv"] = vMVPD_YuppTV()
 
 
 ## restore the streams from json
@@ -51,6 +55,8 @@ class CachedHTTPSession(HTTPSession):
                 fakeResponse = Response()
                 fakeResponse.text = "streamUrl=[{src: \""+all_streams[channel_name]["url"]+"\" , title: '', description: ''}]"
                 return fakeResponse
+            else:
+                logger.info("%s fetch tv page for real"%channel_name)
         return super().request(method, url, *args, **kwargs)
 
     
@@ -146,8 +152,6 @@ def _get_streams(channel_name):
         "expiry": expiry
     }
 
-    # persist streams in case the server get's restarted
-    logger.info("%s - updated master playlist"%channel_name)
     with open(streams_file, 'w') as outfile:
         json.dump(all_streams, outfile, cls=JSONEncoder,sort_keys=True, indent=4)
     return channel_streams
@@ -227,133 +231,139 @@ def get_epg_programme(channel_name,chanid):
 
     return None
 
+def get_all_channels():
+    channelNo = 0
+    channels = {}
+
+    url = 'https://www.yupptv.com/livetv'
+    filename = "index.html"
+    _downloadFile("tmp/"+filename, url)
+    raw = open("tmp/"+filename, "r").read()
+    links = re.findall(
+        '<a href=\'https://www.yupptv.com/channels/(.*)/live\' onclick="sendData\(localStorage.getItem\(\'page\'\),\'(.*)\' ,localStorage', raw)
+    sections = ['ent-1', 'movies', 'music-1',
+                'music-unlimited---live', 'business-1', 'news']
+
+    for link in links:
+        section = link[1]
+
+        if (section != "trending" and section != "recently-watched-live" and section not in sections):
+            sections.append(section)
+
+    for section in sections:
+        if (section != "trending" and section != "recently-watched-live"):
+            page = 0
+            count = 0
+            last_index = 0
+            section_name = ""
+            while(count > 0 or page == 0):
+
+                raw = ""
+
+                if(page == 0):
+                    url = "https://www.yupptv.com/livetv/sections/"+section
+                    filename = "index"+section+".html"
+                    _downloadFile("tmp/"+filename, url)
+
+                else:
+                    url = "https://www.yupptv.com/livetv/sectionGetMore/" + \
+                        section+"/"+str(last_index)
+                    filename = "index"+section+"-"+str(last_index)+".html"
+                    _downloadFile("tmp/"+filename, url)
+
+                raw = open("tmp/"+filename, "r").read()
+
+                root = etree.fromstring(raw, html_parser)
+                paging_selector = CSSSelector('div.last-index')
+                count = int(paging_selector(root)[0].get('data-count'))
+                last_index = int(paging_selector(
+                    root)[0].get('data-last-index'))
+
+                logger.info("------------------")
+                logger.info("%s page %i, count %i, last index %i"%(section, page, count, last_index))
+                if(page == 0):
+                    section_selector = CSSSelector('h1.section-heading')
+                    section_name = section_selector(root)[0].text
+                    link_selector = CSSSelector(
+                        'div.livetv-cards a[href$="/live"]')
+                else:
+                    link_selector = CSSSelector('a[href$="/live"]')
+                img_selector = CSSSelector('img.vert-horz-center')
+                premium_selector = CSSSelector('div.premiumicon')
+
+                page += 1
+                # loop over channels
+                for link in link_selector(root):
+                    available = len(premium_selector(link)) == 0
+
+                    img = img_selector(link)[0]
+                    url = link.get('href')
+                    logo = img.get('data-src')
+                    canonical_name = url[len(
+                            "https://www.yupptv.com/channels/"):-len("/live")]
+                    if(available and canonical_name not in channels):
+
+                        
+                        channelNo += 1
+                        def rchop(s, suffix):
+                            if suffix and s.endswith(suffix):
+                                return s[:-len(suffix)]
+                            return s
+                        display_name = rchop(img.get('alt'), ' Online')
+
+                        language = get_channel_language(canonical_name)
+                        channels[canonical_name] = {"display_name":display_name,"channelNo":channelNo,"logo":logo,"group":section_name+";"+language,"url":url}
+    return channels
 
 def _data_refresh_loop():
     global first_run
     first_run= True
     while True:
 
+        
+        channels = get_all_channels()
         playlist_str = "#EXTM3U\n"
-        channelNo = 0
-        channels = []
         xmlTvRoot = etree.Element("tv")
 
-        url = 'https://www.yupptv.com/livetv'
-        filename = "index.html"
-        _downloadFile("tmp/"+filename, url)
-        raw = open("tmp/"+filename, "r").read()
-        links = re.findall(
-            '<a href=\'https://www.yupptv.com/channels/(.*)/live\' onclick="sendData\(localStorage.getItem\(\'page\'\),\'(.*)\' ,localStorage', raw)
-        sections = ['ent-1', 'movies', 'music-1',
-                    'music-unlimited---live', 'business-1', 'news']
+        for canonical_name in channels:
+            display_name = channels[canonical_name]["display_name"]
+            channelNo = channels[canonical_name]["channelNo"]
+            logo = channels[canonical_name]["logo"]
+            group = channels[canonical_name]["group"]
+            url = channels[canonical_name]["url"]
+            logger.info("%i %s"%(channelNo, canonical_name))
 
-        for link in links:
-            section = link[1]
+            # put together channel epg
+            channelElem = etree.Element("channel")
+            channelElem.set('id', canonical_name)
+            name_elem = etree.SubElement(
+                channelElem, "display-name")
+            name_elem.text = display_name
+            ordernum_elem = etree.SubElement(
+                channelElem, "display-name")
+            ordernum_elem.text = str(channelNo)
+            icon_elem = etree.SubElement(channelElem, "icon")
+            icon_elem.set('src', logo)
 
-            if (section != "trending" and section != "recently-watched-live" and section not in sections):
-                sections.append(section)
+            # get programme epg
+            filename = canonical_name+".html"
+            _downloadFile("tmp/"+filename, url)
+            raw = open("tmp/"+filename, "r").read()
+            chanid = re.search('chanid = \'(\d+)\'', raw).group(1)
+            programmeElem = get_epg_programme(canonical_name,chanid)
+            if(programmeElem is not None or first_run):
+                if programmeElem is not None:
+                    xmlTvRoot.append(programmeElem)
+                xmlTvRoot.append(channelElem)
 
-        for section in sections:
-            if (section != "trending" and section != "recently-watched-live"):
-                page = 0
-                count = 0
-                last_index = 0
-                section_name = ""
-                while(count > 0 or page == 0):
-
-                    raw = ""
-
-                    if(page == 0):
-                        url = "https://www.yupptv.com/livetv/sections/"+section
-                        filename = "index"+section+".html"
-                        _downloadFile("tmp/"+filename, url)
-
-                    else:
-                        url = "https://www.yupptv.com/livetv/sectionGetMore/" + \
-                            section+"/"+str(last_index)
-                        filename = "index"+section+"-"+str(last_index)+".html"
-                        _downloadFile("tmp/"+filename, url)
-
-                    raw = open("tmp/"+filename, "r").read()
-
-                    root = etree.fromstring(raw, html_parser)
-                    paging_selector = CSSSelector('div.last-index')
-                    count = int(paging_selector(root)[0].get('data-count'))
-                    last_index = int(paging_selector(
-                        root)[0].get('data-last-index'))
-
-                    logger.info("------------------")
-                    logger.info("%s page %i, count %i, last index %i"%(section, page, count, last_index))
-                    if(page == 0):
-                        section_selector = CSSSelector('h1.section-heading')
-                        section_name = section_selector(root)[0].text
-                        link_selector = CSSSelector(
-                            'div.livetv-cards a[href$="/live"]')
-                    else:
-                        link_selector = CSSSelector('a[href$="/live"]')
-                    img_selector = CSSSelector('img.vert-horz-center')
-                    premium_selector = CSSSelector('div.premiumicon')
-
-                    page += 1
-                    # loop over channels
-                    for link in link_selector(root):
-                        available = len(premium_selector(link)) == 0
-
-                        img = img_selector(link)[0]
-                        url = link.get('href')
-                        logo = img.get('data-src')
-
-                        def rchop(s, suffix):
-                            if suffix and s.endswith(suffix):
-                                return s[:-len(suffix)]
-                            return s
-                        display_name = rchop(img.get('alt'), ' Online')
-                        if(available and display_name not in channels):
-                            channels.append(display_name)
-                            channelNo += 1
-                            canonical_name = url[len(
-                                "https://www.yupptv.com/channels/"):-len("/live")]
-                            logger.info("%i %s"%(channelNo, canonical_name))
-
-                            channelElem = etree.Element("channel")
-                            channelElem.set('id', canonical_name)
-                            name_elem = etree.SubElement(
-                                channelElem, "display-name")
-                            name_elem.text = display_name
-                            ordernum_elem = etree.SubElement(
-                                channelElem, "display-name")
-                            ordernum_elem.text = str(channelNo)
-                            icon_elem = etree.SubElement(channelElem, "icon")
-                            icon_elem.set('src', logo)
-
-                            filename = canonical_name+".html"
-                            _downloadFile("tmp/"+filename, url)
-                            raw = open("tmp/"+filename, "r").read()
-                            chanid = re.search('chanid = \'(\d+)\'', raw).group(1)
-
-                            language = get_channel_language(canonical_name)
-                            playlist_line1 = "#EXTINF:-1 tvh-epg=\"disable\"  tvh-chnum=\"" + \
-                                str(channelNo)+"\" tvg-logo=\""+logo+"\" tvg-name=\""+canonical_name + \
-                                "\" group-title=\""+section_name+";"+language+"\", "+display_name
-                            # todo: run with --stream-url to pre-fetch the stream url (allows for faster switching of channels)
-                            # refresh stream-url once an hour
-                            # add streamlink --hls-live-edge 1 --quiet "https://ottrintl3.republicworld.com/httppush/ottrintl_republic_english/ottrintl3/master.m3u8?e=1651398600&h=aba7d3b6fdae7e76a5ec87c2f605df2f" best
-                        # fixme: the following command requires an origin header and a patched hls.py to accomodate the wrong encoding
-                        # maybe we can look at all the hostnames like "yuppirecloriginweb" and add them to yupptv.py
-                        #  streamlink --hls-live-edge 1 --quiet --http-header Origin='https://www.yupptv.com'   "https://yuppirecloriginweb.akamaized.net/250920/colorsukhd/playlist.m3u8?hdnts=st=1640184036~exp=1640187636~acl=*~data=yuppTVCom_5_5893399_***REMOVED***_CH_81.17.17.187~hmac=a35cdb79b8c4ccaa5c9e50be868bb78274ff990f49b86742d806cb57fa4472c9" best
-                            #stream_url = subprocess.check_output(['python3', '-m streamlink','--stream-url','--yupptv-boxid=***REMOVED***','--yupptv-yuppflixtoken=***REMOVED***',url],stderr=subprocess.STDOUT)
-
-                            _refresh_streams(canonical_name)
-                        
-                            #playlist_line2 = "pipe://python3 -m streamlink --stdout --quiet --yupptv-boxid=***REMOVED*** --yupptv-yuppflixtoken=***REMOVED*** "+url+" best"
-                            playlist_line2 = "http://localhost:5005/video/yupptv/"+canonical_name
-                            playlist_str += playlist_line1 + "\n" + playlist_line2 + "\n"
-                            programmeElem = get_epg_programme(canonical_name,chanid)
-                            if(programmeElem is not None or first_run):
-                                if programmeElem is not None:
-                                    xmlTvRoot.append(programmeElem)
-                                xmlTvRoot.append(channelElem)
-
+            # update m3u playlist and refresh streams  (to enable faster zapping)
+            _refresh_streams(canonical_name)
+            playlist_line1 = "#EXTINF:-1 tvh-epg=\"disable\"  tvh-chnum=\"" + \
+                str(channelNo)+"\" tvg-logo=\""+logo+"\" tvg-name=\""+canonical_name + \
+                "\" group-title=\""+group+"\", "+display_name
+            playlist_line2 = "http://localhost:5005/video/yupptv/"+canonical_name
+            playlist_str += playlist_line1 + "\n" + playlist_line2 + "\n"
+            
 
         epg_str = etree.tostring(xmlTvRoot, pretty_print=True,
                                 xml_declaration=True, encoding="UTF-8", doctype=XMLTV_DOCTYPE)
@@ -420,7 +430,6 @@ def open_stream(stream):
 def read_stream(stream, prebuffer, chunk_size=8192):
     """Reads data from stream and then writes it to the output."""
 
-
     stream_iterator = chain(
         [prebuffer],
         iter(partial(stream.read, chunk_size), b"")
@@ -442,8 +451,7 @@ def video_feed(provider,channel):
     logger.info("got request for %s-%s"%(provider,channel))
     streams = _get_streams(channel);
     if('best' in streams):
-        stream = streams['best']      
-    logger.info(stream)  
+        stream = streams['best'] 
     stream_fd, prebuffer = open_stream(stream)
     
     return Response(read_stream(stream_fd, prebuffer), mimetype='video/unknown')
