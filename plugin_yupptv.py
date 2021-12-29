@@ -1,4 +1,5 @@
-from vmvpd_plugin import vMVPD_Plugin
+
+from plugin_streamlink import PluginSteamlink, FakeResponse
 
 
 import requests
@@ -30,10 +31,10 @@ class CachedHTTPSession(HTTPSession):
         if match:
             channel_name = match.group(1)
             if(channel_name in self.all_streams and self.all_streams[channel_name]["expiry"] > datetime.now().timestamp()+600):
-                fakeResponse = Response()
-                fakeResponse.text = "streamUrl=[{src: \"" + \
+                fakeResponse = FakeResponse()
+                fakeResponse.setText( "streamUrl=[{src: \"" + \
                     self.all_streams[channel_name]["url"] + \
-                    "\" , title: '', description: ''}]"
+                    "\" , title: '', description: ''}]")
                 return fakeResponse
             else:
                 logger.info("%s fetch tv page for real" % channel_name)
@@ -46,17 +47,21 @@ class CachedStreamlink(Streamlink):
         self.http = CachedHTTPSession()
 
 
-class vMVPD_YuppTV(vMVPD_Plugin):
+class PluginYuppTV(PluginSteamlink):
+
+
+    def getName(self):
+        return 'yupptv'
 
     # restore the streams from json
     all_streams = {}
-    streams_file = "streams.json"
+    streams_file = ""
     cookies = {}
     streamlink_session = None
 
     def __init__(self, cookies):
         super().__init__()
-
+        self.streams_file = "tmp/"+self.getName()+"-streams.json"
         self.streamlink_session = CachedStreamlink()
         if os.path.isfile(self.streams_file):
             json_file = open(self.streams_file)
@@ -85,41 +90,46 @@ class vMVPD_YuppTV(vMVPD_Plugin):
             logger.info("%s refresh streams" % channel_name)
             return self._get_streams(channel_name)
         else:
-            logger.info("%s streams still current" % channel_name)
+            logger.debug("%s streams still current" % channel_name)
             return None
 
     # get the streams for a specific channel
     def _get_streams(self, channel_name):
-        # todo: take this from the epg/channels crawler
-        page_url = "https://www.yupptv.com/channels/"+channel_name+"/live"
-        channel_streams = self.streamlink_session.streams(page_url)
-        stream_url = channel_streams['best'].to_manifest_url()
-        if(stream_url == None):
-            stream_url = channel_streams['best'].url
+        try:
 
-        # get expiry
-        parsed_uri = urlparse(stream_url)
-        params = parse_qs(parsed_uri.query)
-        expiry = -1
-        if("hdnts" in params):
-            hdnts = dict(s.split('=') for s in params["hdnts"][0].split("~"))
-            expiry = int(hdnts["exp"])
-        elif("hdntl" in params):
-            hdntl = dict(s.split('=') for s in params["hdntl"][0].split("~"))
-            expiry = int(hdntl["exp"])
-        elif ("e" in params):
-            expiry = int(params["e"][0])
-        else:
-            expiry = datetime.now().timestamp()+3600*24
+            # todo: take this from the epg/channels crawler
+            page_url = "https://www.yupptv.com/channels/"+channel_name+"/live"
+            channel_streams = self.streamlink_session.streams(page_url)
+            stream_url = channel_streams['best'].to_manifest_url()
+            if(stream_url == None):
+                stream_url = channel_streams['best'].url
 
-        # update streams
-        self.all_streams[channel_name] = {
-            "url": stream_url,
-            "streams": channel_streams,
-            "expiry": expiry
-        }
-        self.update_all_streams_cache(self.all_streams)
-        return channel_streams
+            # get expiry
+            parsed_uri = urlparse(stream_url)
+            params = parse_qs(parsed_uri.query)
+            expiry = -1
+            if("hdnts" in params):
+                hdnts = dict(s.split('=') for s in params["hdnts"][0].split("~"))
+                expiry = int(hdnts["exp"])
+            elif("hdntl" in params):
+                hdntl = dict(s.split('=') for s in params["hdntl"][0].split("~"))
+                expiry = int(hdntl["exp"])
+            elif ("e" in params):
+                expiry = int(params["e"][0])
+            else:
+                expiry = datetime.now().timestamp()+3600*24
+
+            # update streams
+            self.all_streams[channel_name] = {
+                "url": stream_url,
+                "streams": channel_streams,
+                "expiry": expiry
+            }
+            self.update_all_streams_cache(self.all_streams)
+            return channel_streams
+        except PluginError as e:
+            logger.error(e)
+
 
     def get_channel_language(self, channel_name):
         epg_file = "epg.json"
@@ -133,7 +143,7 @@ class vMVPD_YuppTV(vMVPD_Plugin):
             return ""
 
     # todo: we should know the url here
-    def get_epg_programme(self, channel_name, first_run):
+    def get_epg_programme(self, channel_name):
 
         page_url = "https://www.yupptv.com/channels/"+channel_name+"/live"
         filename = channel_name+".html"
@@ -197,10 +207,10 @@ class vMVPD_YuppTV(vMVPD_Plugin):
 
             icon_elem = etree.SubElement(programmeElem, "icon")
             icon_elem.set("src", programme['thumbnailUrl'])
-            if(refreshed or first_run):
-                return programmeElem
+            
+            return programmeElem, refreshed
 
-        return None
+        return None, False
 
     def get_all_channels(self):
         channelNo = 0

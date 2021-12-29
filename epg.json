@@ -3,12 +3,12 @@
         "Programs": [
             {
                 "description": "",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "Spiritual",
                 "language": "Hindi",
-                "name": "Program@04:00",
-                "p_id": 69884616,
-                "startTime": 1640730600000,
+                "name": "Program@21:00",
+                "p_id": 69884650,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/st-ak/370/208/yupptv/roku/images/skyworth/v5/Astroscience_TV_roku.jpg"
             }
         ],
@@ -16,37 +16,37 @@
         "channelName": "Astroscience",
         "genre": "Spiritual",
         "language": "Hindi",
-        "serverTime": 1640730876917
+        "serverTime": 1640792570006
     },
     "10tv": {
         "Programs": [
             {
-                "description": "The anchor presents the latest and most important socio-economic and political news, updates and developments of the day.",
-                "endTime": 1640732400000,
+                "description": "The host talks about the latest and most important socio-economic and political news, updates and developments of the day.",
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Telugu",
-                "name": "Recorded News",
-                "p_id": 69770344,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/31046CCFFE5C7AA1256E37F5DB2E53E52C31A638F.jpg"
+                "name": "Nonstop 90",
+                "p_id": 69771186,
+                "startTime": 1640791620000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/2B44FC13CAD5503586E1CBAC3343B9C1905462E1.jpg"
             }
         ],
         "channelId": 879,
         "channelName": "10TV",
         "genre": "News",
         "language": "Telugu",
-        "serverTime": 1640730866821
+        "serverTime": 1640792563065
     },
     "24": {
         "Programs": [
             {
                 "description": "",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Malayalam",
-                "name": "Program@04:00",
-                "p_id": 69881025,
-                "startTime": 1640730600000,
+                "name": "Program@21:00",
+                "p_id": 69881059,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/st-ak/370/208/yupptv/roku/images/skyworth/v5/24_TV_roku.jpg"
             }
         ],
@@ -54,18 +54,18 @@
         "channelName": "24",
         "genre": "News",
         "language": "Malayalam",
-        "serverTime": 1640730863062
+        "serverTime": 1640792560409
     },
     "6tv": {
         "Programs": [
             {
                 "description": "",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Telugu",
-                "name": "Program@04:00",
-                "p_id": 69889768,
-                "startTime": 1640730600000,
+                "name": "Program@21:00",
+                "p_id": 69889802,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/st-ak/370/208/yupptv/roku/images/skyworth/v5/6tv_roku.jpg"
             }
         ],
@@ -73,18 +73,18 @@
         "channelName": "6TV",
         "genre": "News",
         "language": "Telugu",
-        "serverTime": 1640730864342
+        "serverTime": 1640792561413
     },
     "9x-jalwa": {
         "Programs": [
             {
                 "description": "Back-to-back music.",
-                "endTime": 1640734200000,
+                "endTime": 1640795400000,
                 "genre": "Music",
                 "language": "Hindi",
                 "name": "Jalwa Housefull",
-                "p_id": 69766678,
-                "startTime": 1640730600000,
+                "p_id": 69770750,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/6EFD5B33885F6A2C8517D51C5B2327FBAAFDD93BY.jpg"
             }
         ],
@@ -92,132 +92,132 @@
         "channelName": "9X Jalwa",
         "genre": "Music",
         "language": "Hindi",
-        "serverTime": 1640730828185
+        "serverTime": 1640792557399
     },
     "9xm": {
         "Programs": [
             {
-                "description": "Bade and Chote present a compilation of the biggest and most popular songs from Punjabi movies, musicians and singers to entertain audiences.",
-                "endTime": 1640732400000,
+                "description": "A comprehensive compilation of some of the best and most popular songs composed by renowned artists is played back to back.",
+                "endTime": 1640793600000,
                 "genre": "Music",
                 "language": "Hindi",
-                "name": "Bade-Chote's Playlist",
-                "p_id": 69768666,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/BCC6F42EBCB898A4366D62FCE7D96BE1A141E4A31.jpg"
+                "name": "Popcorn Ready",
+                "p_id": 69771774,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/AE70ACD25B0B66ACC1157426FE6EF1D4B1BAE8E88.jpg"
             }
         ],
         "channelId": 808,
         "channelName": "9XM",
         "genre": "Music",
         "language": "Hindi",
-        "serverTime": 1640730827389
+        "serverTime": 1640792556519
     },
     "aajtak": {
         "Programs": [
             {
-                "description": "The host presents a compilation of the latest updates and developments pertaining to politics, sports, social and economic news.",
-                "endTime": 1640732400000,
+                "description": "The host analyses the day's events in politics, economy, society, cinema and sports, and presents an in-depth analysis of the top stories.",
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Hindi",
-                "name": "News",
-                "p_id": 69771819,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/0B520DDA60A6CA28300FB313C1A7C83F4BEAD8FFH.jpg"
+                "name": "Khabardar",
+                "p_id": 69770283,
+                "startTime": 1640792400000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/90DCA6C95D9CE0A855D5B206BC7D3EC29F80882BS.jpg"
             }
         ],
         "channelId": 8,
         "channelName": "Aajtak",
         "genre": "News",
         "language": "Hindi",
-        "serverTime": 1640730868414
+        "serverTime": 1640792564077
     },
     "aastha-bhajan": {
         "Programs": [
             {
-                "description": "This program features devotional songs.",
-                "endTime": 1640731800000,
+                "description": "A religious leader delivers a discourse on the teachings of Hinduism and inspires devotees to follow a path of righteousness, live.",
+                "endTime": 1640796600000,
                 "genre": "Spiritual",
                 "language": "Hindi",
-                "name": "Chalisa",
-                "p_id": 69768707,
-                "startTime": 1640731200000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/2316FA31B2416C2034367F629364AB9E2360498B8.jpg"
+                "name": "Pujya Sadguru Swami Nityaswarupdasji Live",
+                "p_id": 69768603,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/09485132A7BFC4F283151D87A608BC500B651E1BE.jpg"
             }
         ],
         "channelId": 2329,
         "channelName": "Aastha Bhajan",
         "genre": "Spiritual",
         "language": "Hindi",
-        "serverTime": 1640731309137
+        "serverTime": 1640792567997
     },
     "aastha-tv": {
         "Programs": [
             {
-                "description": "Spiritual leader Yog Rishi Swami Ramdevji delivers a religious discourse to the audience in praise of the all-powerful Almighty.",
-                "endTime": 1640734200000,
+                "description": "Acharya Bal Krishna, a religious scholar, delivers a spiritual discourse and talks about the importance of leading a righteous life.",
+                "endTime": 1640793600000,
                 "genre": "Spiritual",
                 "language": "Hindi",
-                "name": "Yog Rishi Swami Ramdevji",
-                "p_id": 69768638,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/1A1EFB293AC70D00D6EC513CDE43E973348B7DF93.jpg"
+                "name": "Shradhey Acharya Balkrishnaji",
+                "p_id": 69770450,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/E2372EFCBED43EE6193DF1718DE4F8A62AC638C6V.jpg"
             }
         ],
         "channelId": 1519,
         "channelName": "Aastha TV",
         "genre": "Spiritual",
         "language": "Hindi",
-        "serverTime": 1640730872880
+        "serverTime": 1640792567494
     },
     "abp-news": {
         "Programs": [
             {
-                "description": "The host provides information on the latest updates on politics, business, entertainment, science, sports and current events.",
-                "endTime": 1640732400000,
+                "description": "The host presents an analysis of some of the top stories related to various social, political and economic issues in the world.",
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Hindi",
-                "name": "Khabar Din Bhar",
-                "p_id": 69770573,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/141336DDA0E44FA7AD1C7E4F42822C971AE20326I.jpg"
+                "name": "Master Stroke",
+                "p_id": 69770213,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/5F0FFB9D6B84F6347AC568C2620DBE3D9AE7D05BA.jpg"
             }
         ],
         "channelId": 2274,
         "channelName": "ABP News",
         "genre": "News",
         "language": "Hindi",
-        "serverTime": 1640730867597
+        "serverTime": 1640792563578
     },
     "al-jazeera": {
         "Programs": [
             {
-                "description": "The filmmaker sheds light on a man whose baobab forests provides food and climate protection in Burkina Faso and an aspiring wrestler in Senegal.",
-                "endTime": 1640732400000,
-                "genre": "Knowledge",
+                "description": "",
+                "endTime": 1640793600000,
+                "genre": "News",
                 "language": "English",
-                "name": "Africa Direct",
-                "p_id": 69768569,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/D2C5A1364CBE019B95CFB0F088200DD6EFF3444AA.jpg"
+                "name": "Newshour",
+                "p_id": 69768789,
+                "startTime": 1640790000000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/DD414C76382971C9CE215602DE1B214B034227CC.jpg"
             }
         ],
         "channelId": 2449,
         "channelName": "Al Jazeera",
         "genre": "News",
         "language": "ENG",
-        "serverTime": 1640730830562
+        "serverTime": 1640792559384
     },
     "alai-balai": {
         "Programs": [
             {
                 "description": "",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "Entertainment",
                 "language": "Telugu",
-                "name": "Program@04:00",
-                "p_id": 69891070,
-                "startTime": 1640730600000,
+                "name": "Program@21:00",
+                "p_id": 69891104,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/st-ak/370/208/yupptv/roku/images/skyworth/v5/Alai-balai_TV_Roku.jpg"
             }
         ],
@@ -225,151 +225,151 @@
         "channelName": "Alai Balai",
         "genre": "Entertainment",
         "language": "Telugu",
-        "serverTime": 1640730826137
+        "serverTime": 1640792554205
     },
     "and-tv-us-hd": {
         "Programs": [
             {
-                "description": "DCP D'Silva hires Vijay to masquerade as a criminal kingpin. But when D'Silva is murdered, Vijay must defend himself against the gangsters and the police and prove his innocence before time runs out.",
-                "endTime": 1640732400000,
-                "genre": "OTHER",
+                "description": "",
+                "endTime": 1640793600000,
+                "genre": "Entertainment",
                 "language": "Hindi",
-                "name": "Don",
-                "p_id": 69782043,
-                "startTime": 1640721600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/A20A94C0BCE48C570315CD1D2B69D8FC4B1E79E2.jpg"
+                "name": "Apna Time Bhi Aayega",
+                "p_id": 69779592,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/40F73340D2229C477D26B398EAF0E3B26A513F222.jpg"
             }
         ],
         "channelId": 5061,
         "channelName": "And TV US HD",
         "genre": "Entertainment",
         "language": "Hindi",
-        "serverTime": 1640721719651
+        "serverTime": 1640792552318
     },
     "aradana-tv": {
         "Programs": [
             {
-                "description": "Brother P Joshi sheds light on the teachings from the Bible and exhorts devotees to follow the teachings of Jesus to lead a fulfilling life.",
-                "endTime": 1640732400000,
+                "description": "Dr P Satish Kumar delivers a discourse on various spiritual topics to the masses and urges them to follow the path of righteousness.",
+                "endTime": 1640793600000,
                 "genre": "Spiritual",
                 "language": "Telugu",
-                "name": "Bro. P. Joshi",
-                "p_id": 69767440,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/crop/bazaar/20170929185122986202/1506691282986.jpg"
+                "name": "Dr. P. Satish Kumar",
+                "p_id": 69770062,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/crop/bazaar/20170929185225437624/1506691345437.jpg"
             }
         ],
         "channelId": 517,
         "channelName": "Aradana TV",
         "genre": "Spiritual",
         "language": "Telugu",
-        "serverTime": 1640730875059
+        "serverTime": 1640792569001
     },
     "arihant": {
         "Programs": [
             {
-                "description": "Devotees chant the 'Bhaktamara Stotra', seeking divine blessings and answers to their fervent prayers from the Almighty.",
-                "endTime": 1640734320000,
+                "description": "Vijaya Ratna Sunder Suriswarji delivers a discourse on the sacred scriptures and discusses how following the teachings will improve one's quality of life.",
+                "endTime": 1640795400000,
                 "genre": "Spiritual",
                 "language": "Hindi",
-                "name": "Bhaktamar Stotra",
-                "p_id": 69767542,
-                "startTime": 1640730720000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/0FB18B71181368AAFE2BB30E1A5E2A13307CFB81C.jpg"
+                "name": "Pujya Vijaya Ratna Sunder Suriswarji",
+                "p_id": 69765724,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/8375261B5BDD04CB81D8AF9B71F9BE6429BC77AFI.jpg"
             }
         ],
         "channelId": 2328,
         "channelName": "Arihant",
         "genre": "Spiritual",
         "language": "Hindi",
-        "serverTime": 1640730875419
+        "serverTime": 1640792569171
     },
     "asianet-news": {
         "Programs": [
             {
-                "description": "The host presents updates on the crimes committed by people and the investigative proceedings to bring the perpetrators to justice.",
-                "endTime": 1640732700000,
+                "description": "The host presents a round-up of the most recent social, political and economic news updates and developments from the state.",
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Malayalam",
-                "name": "FIR Bulletin",
-                "p_id": 69765954,
-                "startTime": 1640731200000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/68229902D42F45FDCC0AF169824425D984F0662FR.jpg"
+                "name": "Nine @ 9",
+                "p_id": 69765920,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/DC9C87A72B5D841137A7CFC62E4F98751F44F935C.jpg"
             }
         ],
         "channelId": 144,
         "channelName": "Asianet News",
         "genre": "News",
         "language": "Malayalam",
-        "serverTime": 1640731248264
+        "serverTime": 1640792559055
     },
     "bbo": {
         "Programs": [
             {
-                "description": "Mere Bhaiyya",
-                "endTime": 1640732100000,
+                "description": "Kachche Dhaage",
+                "endTime": 1640800500000,
                 "genre": "Movies",
                 "language": "Hindi",
-                "name": "Mere Bhaiyya",
-                "p_id": 69837922,
-                "startTime": 1640723400000,
-                "thumbnailUrl": "https://d2ia67d5502thg.cloudfront.net/images/movies/yuppmovies_Mere-Bhaiyya.jpg"
+                "name": "Kachche Dhaage",
+                "p_id": 69837930,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d2ia67d5502thg.cloudfront.net/images/movies/yuppmovies_KACCHE-DHAAGEY.jpg"
             }
         ],
         "channelId": 3529,
         "channelName": "BBO",
         "genre": "Movies",
         "language": "Hindi",
-        "serverTime": 1640723459876
+        "serverTime": 1640792555444
     },
     "bbo-classic": {
         "Programs": [
             {
-                "description": "Coolie Raja",
-                "endTime": 1640731800000,
+                "description": "Rudraksh",
+                "endTime": 1640800200000,
                 "genre": "Movies",
                 "language": "Hindi",
-                "name": "Coolie Raja",
-                "p_id": 69837798,
-                "startTime": 1640723400000,
-                "thumbnailUrl": "https://d2ia67d5502thg.cloudfront.net/images/movies/yuppmovies_Coolie-Raja.jpg"
+                "name": "Rudraksh",
+                "p_id": 69837806,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d2ia67d5502thg.cloudfront.net/images/movies/yuppmovies_Rudraksh.jpeg"
             }
         ],
         "channelId": 4220,
         "channelName": "BBO Classic",
         "genre": "Movies",
         "language": "Hindi",
-        "serverTime": 1640723460087
+        "serverTime": 1640792555615
     },
     "bbo-uk": {
         "Programs": [
             {
-                "description": "Golmaal",
-                "endTime": 1640733900000,
+                "description": "Aar Paar",
+                "endTime": 1640795400000,
                 "genre": "Movies",
                 "language": "Hindi",
-                "name": "Golmaal",
-                "p_id": 69856008,
-                "startTime": 1640725200000,
-                "thumbnailUrl": "https://d2ia67d5502thg.cloudfront.net/images/movies/yuppmovies_Golmaal.jpg"
+                "name": "Aar Paar",
+                "p_id": 69858489,
+                "startTime": 1640787000000,
+                "thumbnailUrl": "https://d2ia67d5502thg.cloudfront.net/images/movies/yuppmovies_Aar-Paar.jpg"
             }
         ],
         "channelId": 3679,
         "channelName": "BBO UK",
         "genre": "Movies",
         "language": "Hindi",
-        "serverTime": 1640726771585
+        "serverTime": 1640792555847
     },
     "bhakti-tv": {
         "Programs": [
             {
                 "description": "A religious leader delivers discourses on the Sama Veda, one of the ancient Hindu scriptures, to a gathering of devotees in order to inspire them to follow the principles in their lives.",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "Spiritual",
                 "language": "Telugu",
                 "name": "Samavedam Pravachanam",
-                "p_id": 69766560,
-                "startTime": 1640730600000,
+                "p_id": 69768491,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/0B8ADF07DB1E7CBD2284F392CF847B7B6AE22D23G.jpg"
             }
         ],
@@ -377,18 +377,18 @@
         "channelName": "Bhakti TV",
         "genre": "Spiritual",
         "language": "Telugu",
-        "serverTime": 1640730871474
+        "serverTime": 1640792566639
     },
     "brahma-kumaris": {
         "Programs": [
             {
                 "description": "",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "Spiritual",
                 "language": "Hindi",
-                "name": "Program@04:00",
-                "p_id": 69893764,
-                "startTime": 1640730600000,
+                "name": "Program@21:00",
+                "p_id": 69893799,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/tv/480/270/languages/brahma-kumaris.jpg"
             }
         ],
@@ -396,56 +396,56 @@
         "channelName": "Brahma Kumaris",
         "genre": "Spiritual",
         "language": "Hindi",
-        "serverTime": 1640730873384
+        "serverTime": 1640792567824
     },
     "colors-rishtey": {
         "Programs": [
             {
-                "description": "Parth is dejected as they are unable to find Shorvori. Teni tells him not to lose heart, saying that they will find her eventually; Ambika and Dadaji discuss Jalpa.",
-                "endTime": 1640732400000,
+                "description": "Thapki, a lively and intelligent girl, faces certain problems that affect her life. She decides to move to a city in order to find a job and meets all challenges in a positive way.",
+                "endTime": 1640793600000,
                 "genre": "Entertainment",
                 "language": "Hindi",
-                "name": "Dil Se Dil Tak",
-                "p_id": 69776549,
-                "startTime": 1640730660000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/9CBC67125D38B03DA63A00177E995A1179F479F1I.jpg"
+                "name": "Thapki Pyar Ki",
+                "p_id": 69777684,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/crop/bazaar/20170928214519776769/1506615319776.jpg"
             }
         ],
         "channelId": 976,
         "channelName": "Colors Rishtey",
         "genre": "Entertainment",
         "language": "Hindi",
-        "serverTime": 1640730821987
+        "serverTime": 1640792551470
     },
     "colors-uk": {
         "Programs": [
             {
-                "description": "With the help of a survival kit, the contestants navigate their way through the jungle where Vishwasuntree plays a vital role in their survival.",
-                "endTime": 1640734800000,
+                "description": "Seher, Sarabjeet and Meher's daughter, grows up into a fiercely independent woman, living on her own terms. However, she finds herself pulled in two directions when Kunal and Rajveer enter her life.",
+                "endTime": 1640793600000,
                 "genre": "Entertainment",
                 "language": "Hindi",
-                "name": "Bigg Boss",
-                "p_id": 69774410,
-                "startTime": 1640727000000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/77AE2B6734BCEA0AB4CCABBE76A7F44C3064F86CS.jpg"
+                "name": "Choti Sarrdaarni",
+                "p_id": 69774185,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/8814FAF70075E026104BBE5666E9FD6C96F807BFD.jpg"
             }
         ],
         "channelId": 974,
         "channelName": "Colors UK HD",
         "genre": "Entertainment",
         "language": "Hindi",
-        "serverTime": 1640728788712
+        "serverTime": 1640792551202
     },
     "cvr-english-news": {
         "Programs": [
             {
                 "description": "A news bulletin, which keeps the viewers updated with the latest regional and national news.",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Telugu",
                 "name": "News Bulletin",
-                "p_id": 69769528,
-                "startTime": 1640730600000,
+                "p_id": 69775377,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/8A4F7A7B67E468330526D9B34C3A16133E07CEDAB.jpg"
             }
         ],
@@ -453,189 +453,189 @@
         "channelName": "CVR English News",
         "genre": "News",
         "language": "Telugu",
-        "serverTime": 1640730864995
+        "serverTime": 1640792561749
     },
     "cvr-news": {
         "Programs": [
             {
-                "description": "The host talks about the latest and most important socio-economic and political news, updates and developments making headlines.",
-                "endTime": 1640734200000,
+                "description": "A news bulletin, which updates the viewers with the latest regional and national news.",
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Telugu",
-                "name": "11 PM News",
-                "p_id": 69728315,
-                "startTime": 1640712600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/EED10FFA63A2B14F9FC8FE0A079770FAA8018213C.jpg"
+                "name": "Prime Time At 9",
+                "p_id": 69766176,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/0C145B893088262F9C60D1075223304D87DD0329X.jpg"
             }
         ],
         "channelId": 637,
         "channelName": "CVR News",
         "genre": "News",
         "language": "Telugu",
-        "serverTime": 1640721941361
+        "serverTime": 1640792562218
     },
     "darshan24": {
         "Programs": [
             {
-                "description": "A religious leader educates his followers on a variety of spiritual topics and urges them to follow the path of God.",
-                "endTime": 1640732400000,
-                "genre": "Spiritual",
+                "description": "",
+                "endTime": 1640793600000,
+                "genre": "Fashion & Lifestyle",
                 "language": "Hindi",
-                "name": "Anmol Vachan",
-                "p_id": 69766229,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/8FFDCE486748F0FF4D702C74AA6BA29E4D1F5E6AH.jpg"
+                "name": "Sehat Aur Zindagi",
+                "p_id": 69770204,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/76D590A6701B70215B49614A0E25539CCA796FD4X.jpg"
             }
         ],
         "channelId": 649,
         "channelName": "Darshan24",
         "genre": "Spiritual",
         "language": "Hindi",
-        "serverTime": 1640730875675
+        "serverTime": 1640792569342
     },
     "darshanatv": {
         "Programs": [
             {
-                "description": "A show focussing on religion or spirituality.",
-                "endTime": 1640732400000,
-                "genre": "Spiritual",
+                "description": "A cooking expert shares various recipes and the step-by-step process of making some of the most delicious dishes from Kerala.",
+                "endTime": 1640793600000,
+                "genre": "Fashion & Lifestyle",
                 "language": "Malayalam",
-                "name": "Vallathoru Duniyav",
-                "p_id": 69766249,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/CD628B46A2D6272B9F69CE869B1D588D9133F9D19.jpg"
+                "name": "Malayali's Kitchen",
+                "p_id": 69766284,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/612366D545738A82C54154116AC959A463AB9F0FR.jpg"
             }
         ],
         "channelId": 3354,
         "channelName": "DarshanaTV",
         "genre": "Entertainment",
         "language": "Malayalam",
-        "serverTime": 1640730824046
+        "serverTime": 1640792552835
     },
     "divya-tv": {
         "Programs": [
             {
-                "description": "This program is based on early morning meditation and recitation of prayers.",
-                "endTime": 1640734200000,
+                "description": "",
+                "endTime": 1640793600000,
                 "genre": "Spiritual",
                 "language": "Hindi",
-                "name": "Simran Sadhna",
-                "p_id": 69770488,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/8518F9B1299E3F43DACFD483AB570E62593C3390L.jpg"
+                "name": "Sharnagat",
+                "p_id": 69770512,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/B3162890CC1419D225B85D84CD1EB289CAECF662T.jpg"
             }
         ],
         "channelId": 778,
         "channelName": "Divya TV",
         "genre": "Spiritual",
         "language": "Hindi",
-        "serverTime": 1640730877471
+        "serverTime": 1640792570348
     },
     "e24": {
         "Programs": [
             {
-                "description": "",
-                "endTime": 1640732400000,
-                "genre": "OTHER",
+                "description": "A compilation of some of the best music and songs written, composed and recorded by popular Indian singers and musicians.",
+                "endTime": 1640793600000,
+                "genre": "Music",
                 "language": "Hindi",
-                "name": "Khoonkhar",
-                "p_id": 69768141,
-                "startTime": 1640725200000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/5BB849D559D2C16BAE83F676194A880DAC9603FAI.jpg"
+                "name": "Karare Hits",
+                "p_id": 69768284,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/A9D3AC821EC35A2F716CD70735A4CB932386C5C7R.jpg"
             }
         ],
         "channelId": 2715,
         "channelName": "E24",
         "genre": "Music",
         "language": "Hindi",
-        "serverTime": 1640726783267
+        "serverTime": 1640792556689
     },
     "et-now-swadesh": {
         "Programs": [
             {
-                "description": "The host presents a detailed analysis of various investment policies and provides expert advice on money-related matters.",
-                "endTime": 1640734200000,
-                "genre": "Business & Finance",
+                "description": "The host presents updates on the latest and the most relevant social, political and economic issues from across the country.",
+                "endTime": 1640793600000,
+                "genre": "News",
                 "language": "Hindi",
-                "name": "Money Mantra",
-                "p_id": 69778552,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/A3B07D81E0E998471ABE39FFA448767868738B64E.jpg"
+                "name": "Khabrein Fatafat",
+                "p_id": 69782297,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/2EBCF9D23D80324D8945F00C0AE3B6E59BC11120J.jpg"
             }
         ],
         "channelId": 5372,
         "channelName": "ET Now Swadesh",
         "genre": "Business News",
         "language": "Hindi",
-        "serverTime": 1640730828449
+        "serverTime": 1640792557723
     },
     "etnow": {
         "Programs": [
             {
-                "description": "The host presents a round-up of some of the most recent top 10 news stories pertaining to the current affairs of the nation.",
-                "endTime": 1640732400000,
+                "description": "The host conducts a debate between experts as they provide their views and opinions on important topics related to development in India.",
+                "endTime": 1640795400000,
                 "genre": "News",
                 "language": "English",
-                "name": "Et Now Top 10@10",
-                "p_id": 69770121,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/2385CB35980905BD0663436055FAF8173F7C6836W.jpg"
+                "name": "India Development Debate",
+                "p_id": 69768288,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/3A5482F3A867192B89C2C01AE246ED44457A4E6BE.jpg"
             }
         ],
         "channelId": 117,
         "channelName": "ETNow",
         "genre": "News",
         "language": "ENG",
-        "serverTime": 1640730830014
+        "serverTime": 1640792558908
     },
     "etv-andhra-pradesh": {
         "Programs": [
             {
-                "description": "The host presents the latest news, updates and developments from around the world.",
-                "endTime": 1640732400000,
-                "genre": "News",
+                "description": "Youth are offered a platform for a healthy exchange of views and opinions on the latest developments and policies for them.",
+                "endTime": 1640793600000,
+                "genre": "Entertainment",
                 "language": "Telugu",
-                "name": "Ghantaravam",
-                "p_id": 69767925,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/2B44FC13CAD5503586E1CBAC3343B9C1905462E1.jpg"
+                "name": "Yuva",
+                "p_id": 69768339,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/C732323F533AD95DE3A86D45BC5BFE4555D9D4C2N.jpg"
             }
         ],
         "channelId": 44,
         "channelName": "ETV Andhra Pradesh",
         "genre": "News",
         "language": "Telugu",
-        "serverTime": 1640730831734
+        "serverTime": 1640792560067
     },
     "etv-telangana": {
         "Programs": [
             {
-                "description": "The host presents the latest news, updates and developments from around the world.",
-                "endTime": 1640732400000,
-                "genre": "News",
+                "description": "Youth are offered a platform for a healthy exchange of views and opinions on the latest developments and policies for them.",
+                "endTime": 1640793600000,
+                "genre": "Entertainment",
                 "language": "Telugu",
-                "name": "Ghantaravam",
-                "p_id": 69770262,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/st-ak/370/208/yupptv/ndtvepg/or1/etv_telangana_ghantaravam.jpg"
+                "name": "Yuva",
+                "p_id": 69768009,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/C732323F533AD95DE3A86D45BC5BFE4555D9D4C2N.jpg"
             }
         ],
         "channelId": 2308,
         "channelName": "ETV Telangana",
         "genre": "News",
         "language": "Telugu",
-        "serverTime": 1640730831421
+        "serverTime": 1640792559893
     },
     "garshom-tv": {
         "Programs": [
             {
                 "description": "",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "Entertainment",
                 "language": "Malayalam",
-                "name": "Program@04:00",
-                "p_id": 69878958,
-                "startTime": 1640730600000,
+                "name": "Program@21:00",
+                "p_id": 69878992,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/st-ak/370/208/yupptv/roku/images/skyworth/v5/Garshom_roku.jpg"
             }
         ],
@@ -643,56 +643,56 @@
         "channelName": "Garshom TV",
         "genre": "Entertainment",
         "language": "Malayalam",
-        "serverTime": 1640730824618
+        "serverTime": 1640792553183
     },
     "god-tv": {
         "Programs": [
             {
-                "description": "Pastor Ramiro Pena, the founder of Christ the King Church of Waco, sheds light on the teachings of the Bible. He hopes to help devotees become more like Christ.",
-                "endTime": 1640732400000,
+                "description": "Reverend Betty King reads out passages from the Bible and explains their meaning in a simple and easy-to-understand manner.",
+                "endTime": 1640793600000,
                 "genre": "Spiritual",
                 "language": "English",
-                "name": "Pastor Ramiro Pena",
-                "p_id": 69781460,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/677448B23ABB6BDBA10452B9A0D103AA89E31E5FU.jpg"
+                "name": "The Cry With Betty King",
+                "p_id": 69779640,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/EE7421052040D9B23F27BCB54BA3F0FB9B88A912Z.jpg"
             }
         ],
         "channelId": 2576,
         "channelName": "God TV",
         "genre": "Spiritual",
         "language": "ENG",
-        "serverTime": 1640730876239
+        "serverTime": 1640792569679
     },
     "goodness-tv": {
         "Programs": [
             {
-                "description": "Devotional programme.",
-                "endTime": 1640732400000,
+                "description": "",
+                "endTime": 1640793600000,
                 "genre": "Spiritual",
                 "language": "Malayalam",
-                "name": "Potta Convention",
-                "p_id": 69782135,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/CE8C0A37CC624CD056161DE86AA3AB5B9B467054L.jpg"
+                "name": "Youth Retreat /Pulkoodu",
+                "p_id": 69779122,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/222CC831BE44ED2AADF92A1C8D0CBDBE54834119V.jpg"
             }
         ],
         "channelId": 1441,
         "channelName": "Goodness TV",
         "genre": "Spiritual",
         "language": "Malayalam",
-        "serverTime": 1640730876661
+        "serverTime": 1640792569838
     },
     "hare-krishna-tv": {
         "Programs": [
             {
                 "description": "Sriman Gauranga Das delivers a discourse on yoga and explains how it benefits the body and mind.",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "Spiritual",
                 "language": "Hindi",
                 "name": "Yoga Stories",
-                "p_id": 69772490,
-                "startTime": 1640730600000,
+                "p_id": 69770103,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/D0917BD443A0AC0E0A3E26FAE1ECC223DCC22557A.jpg"
             }
         ],
@@ -700,170 +700,170 @@
         "channelName": "Hare Krishna TV",
         "genre": "Spiritual",
         "language": "Hindi",
-        "serverTime": 1640730873968
+        "serverTime": 1640792568166
     },
     "hindu-dharmam": {
         "Programs": [
             {
-                "description": "Religious experts talk about the proper way to begin the day on a positive note and how a person can attain mental and physical composure by following these steps.",
-                "endTime": 1640732400000,
+                "description": "Sri Chinna Jeeyar Swamy gives a discourse based on the Hindu scriptures and explains the significance of following the spiritual path.",
+                "endTime": 1640793600000,
                 "genre": "Spiritual",
                 "language": "Telugu",
-                "name": "Suprabhatam",
-                "p_id": 69782101,
-                "startTime": 1640730900000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/A00BB1E4ECECEF66AF1F773A7FF09AD5CB123AF7M.jpg"
+                "name": "Chinajiyar Swamy Amrutha Vakkulu",
+                "p_id": 69778810,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/D353ED8FB88E9E0FE6360663832A1164F4B78C66S.jpg"
             }
         ],
         "channelId": 3531,
         "channelName": "Hindu Dharmam",
         "genre": "Spiritual",
         "language": "Telugu",
-        "serverTime": 1640730924786
+        "serverTime": 1640792568344
     },
     "hmtv": {
         "Programs": [
             {
-                "description": "The host presents the top 25 stories from around the world; the host presents socio-political, economic and sports news from around the world.",
-                "endTime": 1640732400000,
+                "description": "The host presents the latest news updates and developments regarding social, political and economic issues from various parts of the country and the world.",
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Telugu",
-                "name": "5/25 Heads / News",
-                "p_id": 69778858,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/4E0871B1C561E40B3EC45EC104E26FFC9F99C301X.jpg"
+                "name": "9 Pm Prime Time",
+                "p_id": 69781984,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/293A653C65BDF73292A50A643177E0D2BBB13ADCQ.jpg"
             }
         ],
         "channelId": 60,
         "channelName": "HMTV",
         "genre": "News",
         "language": "Telugu",
-        "serverTime": 1640730865628
+        "serverTime": 1640792562064
     },
     "india-today-news": {
         "Programs": [
             {
-                "description": "The host presents a compilation of the latest updates and developments pertaining to politics, sports, social and economic news.",
-                "endTime": 1640732400000,
+                "description": "A presenter reports the latest news and updates of the day in the fields of politics, social issues, education, sports and administration.",
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "English",
-                "name": "News",
-                "p_id": 69765628,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/0B520DDA60A6CA28300FB313C1A7C83F4BEAD8FFH.jpg"
+                "name": "News Today",
+                "p_id": 69767648,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/2B44FC13CAD5503586E1CBAC3343B9C1905462E1.jpg"
             }
         ],
         "channelId": 11,
         "channelName": "India Today News",
         "genre": "News",
         "language": "ENG",
-        "serverTime": 1640730828977
+        "serverTime": 1640792558064
     },
     "indiatv": {
         "Programs": [
             {
-                "description": "The host presents some of the latest news stories, current affairs and developments pertaining to economics, politics and sports.",
-                "endTime": 1640732400000,
+                "description": "Host Rajat Sharma provides the latest news on the latest events and current affairs along with a detailed analysis of the topics.",
+                "endTime": 1640795280000,
                 "genre": "News",
                 "language": "Hindi",
-                "name": "Super 100",
-                "p_id": 69765652,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/FF141C7320BB1E2F541A5F2F9F66B7428C58C8D2F.jpg"
+                "name": "Aaj Ki Baat-Rajat Sharma Ke Saath",
+                "p_id": 69765674,
+                "startTime": 1640791620000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/6D7CD71E27E9621781AA2C6F6C1CE0D2A575F1B49.jpg"
             }
         ],
         "channelId": 3798,
         "channelName": "IndiaTV",
         "genre": "News",
         "language": "Hindi",
-        "serverTime": 1640730870329
+        "serverTime": 1640792565956
     },
     "inews": {
         "Programs": [
             {
-                "description": "The host presents a compilation of the latest updates and developments pertaining to politics, sports, social and economic news.",
-                "endTime": 1640732400000,
+                "description": "The host provides a detailed report on the latest political, social and economic news, updates and developments from around the world.",
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Telugu",
-                "name": "News",
-                "p_id": 69765502,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/0B520DDA60A6CA28300FB313C1A7C83F4BEAD8FFH.jpg"
+                "name": "Super Prime Time News",
+                "p_id": 69765535,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/227DE45DFAAC3E1B41331D9ABDBF0940DE8C91CDB.jpg"
             }
         ],
         "channelId": 704,
         "channelName": "iNews",
         "genre": "News",
         "language": "Telugu",
-        "serverTime": 1640730866558
+        "serverTime": 1640792562721
     },
     "jaihind-tv": {
         "Programs": [
             {
-                "description": "The host presents the latest updates on politics, business, entertainment, science, sports and current events from across the world.",
-                "endTime": 1640732400000,
+                "description": "The host presents all the major news updates and developments pertaining to politics, society and economy from around the country, live.",
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Malayalam",
-                "name": "News At 7 PM",
-                "p_id": 69765834,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/0D4195A0F36AEBC6BAEA0F5C81207E1FD4547391R.jpg"
+                "name": "News At 9 Pm Live",
+                "p_id": 69767698,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/5D1D6BCB330FA2B4D443B1B99BE091AFE4303D0C9.jpg"
             }
         ],
         "channelId": 307,
         "channelName": "Jaihind TV",
         "genre": "Entertainment",
         "language": "Malayalam",
-        "serverTime": 1640730825785
+        "serverTime": 1640792554036
     },
     "janam-tv": {
         "Programs": [
             {
-                "description": "Incidents that were headlines once and remain in obscurity now are investigated again to know how the matters rest at present.",
-                "endTime": 1640732400000,
+                "description": "A panel of experts discuss various social issues impacting the lives of people and share their opinions.",
+                "endTime": 1640795400000,
                 "genre": "Entertainment",
                 "language": "Malayalam",
-                "name": "Thalakkettu Mayumbol",
-                "p_id": 69765832,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/CE99B23AA38E3170D20D570DB5A85A3AC7693AED5.jpg"
+                "name": "Janam Tonight",
+                "p_id": 69765886,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/8F4967F8742CADA5D8108C03A834921CE9D15FEEJ.jpg"
             }
         ],
         "channelId": 3078,
         "channelName": "Janam TV",
         "genre": "Entertainment",
         "language": "Malayalam",
-        "serverTime": 1640730823565
+        "serverTime": 1640792552660
     },
     "keralavision": {
         "Programs": [
             {
-                "description": "Magazine programme.",
-                "endTime": 1640732400000,
-                "genre": "Knowledge",
+                "description": "A comprehensive compilation of some of the most memorably hilarious clippings from various popular movies is played back-to-back.",
+                "endTime": 1640793600000,
+                "genre": "Entertainment",
                 "language": "Malayalam",
-                "name": "Hitchart 2020",
-                "p_id": 69773051,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/F64AEB7FD72A5F783763F2A176EB5089F49A8CD34.jpg"
+                "name": "Chirikkalam",
+                "p_id": 69768974,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/D162A0655D75FE151303189CC8DCE34444CDE554Q.jpg"
             }
         ],
         "channelId": 1859,
         "channelName": "Kerala Vision",
         "genre": "Entertainment",
         "language": "Malayalam",
-        "serverTime": 1640730824888
+        "serverTime": 1640792553532
     },
     "krishna-vani": {
         "Programs": [
             {
                 "description": "A melodious compilation of devotional songs and hymns composed and sung by various renowned artists played back to back.",
-                "endTime": 1640737800000,
+                "endTime": 1640793600000,
                 "genre": "Spiritual",
                 "language": "Hindi",
                 "name": "Bhajan Sangrah",
-                "p_id": 69782360,
-                "startTime": 1640718000000,
+                "p_id": 69781891,
+                "startTime": 1640783700000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/CB72537708CC06270D73E9088CD2F4F0F2C73711G.jpg"
             }
         ],
@@ -871,18 +871,18 @@
         "channelName": "Krishna Vani",
         "genre": "Spiritual",
         "language": "Hindi",
-        "serverTime": 1640728420183
+        "serverTime": 1640792568839
     },
     "magnavision-tv": {
         "Programs": [
             {
                 "description": "",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "Entertainment",
                 "language": "Malayalam",
-                "name": "Program@04:00",
-                "p_id": 69879727,
-                "startTime": 1640730600000,
+                "name": "Program@21:00",
+                "p_id": 69879761,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/st-ak/370/208/yupptv/roku/images/skyworth/v5/Magnavision_TV_roku.jpg"
             }
         ],
@@ -890,37 +890,37 @@
         "channelName": "Magnavision TV",
         "genre": "Entertainment",
         "language": "Malayalam",
-        "serverTime": 1640730824342
+        "serverTime": 1640792553016
     },
     "mahaa-tv": {
         "Programs": [
             {
-                "description": "The host presents an in-depth analysis of various important social, political and economic issues concerning the nation.",
-                "endTime": 1640732400000,
+                "description": "The host presents a series of interesting reports based on politics, sports, economics, culture and human-interest stories.",
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Telugu",
-                "name": "7:30 Focus",
-                "p_id": 69776054,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/0697489A6D06C996D8047DD8039BA0CC48254D66.jpg"
+                "name": "Fast News",
+                "p_id": 69768832,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/E4B1AD384BDAB8C412506A469DFBE403F0230305G.jpg"
             }
         ],
         "channelId": 194,
         "channelName": "Mahaa TV",
         "genre": "News",
         "language": "Telugu",
-        "serverTime": 1640730865956
+        "serverTime": 1640792562385
     },
     "mana-tv": {
         "Programs": [
             {
                 "description": "",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "LiveEvent",
                 "language": "Telugu",
-                "name": "Program@04:00",
-                "p_id": 69890923,
-                "startTime": 1640730600000,
+                "name": "Program@21:00",
+                "p_id": 69890957,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/tv/480/270/languages/mana-tv.jpg"
             }
         ],
@@ -928,18 +928,18 @@
         "channelName": "Mana TV",
         "genre": "Movies",
         "language": "Telugu",
-        "serverTime": 1640730826743
+        "serverTime": 1640792554538
     },
     "mana-tv-international": {
         "Programs": [
             {
                 "description": "",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "Entertainment",
                 "language": "Telugu",
-                "name": "Program@04:00",
-                "p_id": 69879343,
-                "startTime": 1640730600000,
+                "name": "Program@21:00",
+                "p_id": 69879377,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/st-ak/370/208/yupptv/roku/images/skyworth/v5/ManaTV-International_roku.jpg"
             }
         ],
@@ -947,18 +947,18 @@
         "channelName": "Mana TV International",
         "genre": "Entertainment",
         "language": "Telugu",
-        "serverTime": 1640730825234
+        "serverTime": 1640792553701
     },
     "mangalmay-tv": {
         "Programs": [
             {
                 "description": "",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "Spiritual",
                 "language": "Hindi",
-                "name": "Program@04:00",
-                "p_id": 69891960,
-                "startTime": 1640730600000,
+                "name": "Program@21:00",
+                "p_id": 69891994,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/tv/480/270/languages/mangalmay-tv.jpg"
             }
         ],
@@ -966,37 +966,37 @@
         "channelName": "Mangalmay TV",
         "genre": "Spiritual",
         "language": "Hindi",
-        "serverTime": 1640730877191
+        "serverTime": 1640792570176
     },
     "manorama-news": {
         "Programs": [
             {
-                "description": "News bulletin highlighting the important events pertaining to the Gulf countries.",
-                "endTime": 1640732100000,
+                "description": "The host presents a quick update on the top stories of the day ranging from politics and business to sports and entertainment.",
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Malayalam",
-                "name": "News Tonight",
-                "p_id": 69776163,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/DDEC12C71BA8AFE65735F6A80FE0F8C5834E3EFFG.jpg"
+                "name": "Speed News",
+                "p_id": 69769239,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/AC35D02B866B23EEBB4466AA962EC455B92014B46.jpg"
             }
         ],
         "channelId": 1932,
         "channelName": "Manorama News",
         "genre": "News",
         "language": "Malayalam",
-        "serverTime": 1640730862671
+        "serverTime": 1640792560237
     },
     "mariantv": {
         "Programs": [
             {
                 "description": "",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "Spiritual",
                 "language": "Malayalam",
-                "name": "Program@04:00",
-                "p_id": 69879198,
-                "startTime": 1640730600000,
+                "name": "Program@21:00",
+                "p_id": 69879232,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/st-ak/370/208/yupptv/roku/images/skyworth/v5/Marian_TV_roku.jpg"
             }
         ],
@@ -1004,18 +1004,18 @@
         "channelName": "MarianTV",
         "genre": "Spiritual",
         "language": "Malayalam",
-        "serverTime": 1640730873131
+        "serverTime": 1640792567656
     },
     "mastiii": {
         "Programs": [
             {
                 "description": "",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "Music",
                 "language": "Hindi",
-                "name": "Program@04:00",
-                "p_id": 69888904,
-                "startTime": 1640730600000,
+                "name": "Program@21:00",
+                "p_id": 69888938,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/st-ak/370/208/yupptv/roku/images/skyworth/v5/Mastiii_TV_roku.jpg"
             }
         ],
@@ -1023,18 +1023,18 @@
         "channelName": "Mastiii",
         "genre": "Music",
         "language": "Hindi",
-        "serverTime": 1640730827033
+        "serverTime": 1640792556016
     },
     "mathrubhumi-news": {
         "Programs": [
             {
                 "description": "The hosts present the latest news updates and major stories pertaining to politics, sports, social issues, business and finance from around the world.",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Malayalam",
                 "name": "News Express",
-                "p_id": 69771230,
-                "startTime": 1640730600000,
+                "p_id": 69770327,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/757295B0E316105E8EEBA7740E049F75ECAF4EE72.jpg"
             }
         ],
@@ -1042,18 +1042,18 @@
         "channelName": "Mathrubhumi News",
         "genre": "News",
         "language": "Malayalam",
-        "serverTime": 1640730863404
+        "serverTime": 1640792560570
     },
     "mirror-now": {
         "Programs": [
             {
                 "description": "The host, along with experts, discusses various topics pertaining to the business industry, real estate investments and finance.",
-                "endTime": 1640734200000,
+                "endTime": 1640795400000,
                 "genre": "OTHER",
                 "language": "English",
                 "name": "The Urban Debate",
-                "p_id": 69769945,
-                "startTime": 1640730600000,
+                "p_id": 69777072,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/55275FC35F8264162CAA6E97AE09EEDDB65410667.jpg"
             }
         ],
@@ -1061,75 +1061,75 @@
         "channelName": "Mirror Now",
         "genre": "News",
         "language": "ENG",
-        "serverTime": 1640730829230
+        "serverTime": 1640792558234
     },
     "music-india": {
         "Programs": [
             {
-                "description": "A robust and eclectic playlist comprising some of the best chart-topping songs from popular movies in the Bollywood film industry.",
-                "endTime": 1640734200000,
+                "description": "A carefully curated playlist of romantic songs from movies, which listeners can dedicate to their loved ones for various occasions.",
+                "endTime": 1640795400000,
                 "genre": "Music",
                 "language": "Hindi",
-                "name": "Lage Raho",
-                "p_id": 69780061,
-                "startTime": 1640727000000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/D22A896043F3BC46918C4CF9DE1229840137305EH.jpg"
+                "name": "Love Connection",
+                "p_id": 69780596,
+                "startTime": 1640792400000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/94419030268F8BE7C113D2A521F94B42C9B091FAM.jpg"
             }
         ],
         "channelId": 697,
         "channelName": "Music India",
         "genre": "Music",
         "language": "Hindi",
-        "serverTime": 1640728049398
+        "serverTime": 1640792556352
     },
     "ndtv-24x7": {
         "Programs": [
             {
-                "description": "The host presents a compilation of the latest updates and developments pertaining to politics, sports, social and economic news.",
-                "endTime": 1640732400000,
+                "description": "Host Vishnu Som presents a detailed insight into the top stories, ranging from politics to economy, from across the country.",
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "English",
-                "name": "News",
-                "p_id": 69780416,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/0B520DDA60A6CA28300FB313C1A7C83F4BEAD8FFH.jpg"
+                "name": "The Day's Big Story With Vishnu Som",
+                "p_id": 69781247,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/2B44FC13CAD5503586E1CBAC3343B9C1905462E1.jpg"
             }
         ],
         "channelId": 195,
         "channelName": "NDTV 24x7",
         "genre": "News",
         "language": "ENG",
-        "serverTime": 1640730829501
+        "serverTime": 1640792558574
     },
     "ndtv-india": {
         "Programs": [
             {
-                "description": "Reporters visit the locations of breaking news stories across India and give information and real-time updates about the particular event.",
-                "endTime": 1640732400000,
+                "description": "The host invites a panel of experts from different fields to share their views and opinions on important topics related to current issues.",
+                "endTime": 1640795400000,
                 "genre": "News",
                 "language": "Hindi",
-                "name": "News NDTV India",
-                "p_id": 69774283,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/1DE221D55DCC53C02EC66172E12E9DAD7FE93753R.jpg"
+                "name": "Prime Time",
+                "p_id": 69781233,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/2D5A56AE8587857D94CEA5EA54112E039DAA786B5.jpg"
             }
         ],
         "channelId": 196,
         "channelName": "NDTV INDIA",
         "genre": "News",
         "language": "Hindi",
-        "serverTime": 1640730868153
+        "serverTime": 1640792563909
     },
     "ndtv-profit": {
         "Programs": [
             {
-                "description": "The host sheds light on a charitable organisation's initiative of feeding vulnerable communities and creating a long-term impact pertaining to income generation.",
-                "endTime": 1640736000000,
+                "description": "The host delves deeper into some of the most pressing socio-economic and political issues affecting various areas across the nation.",
+                "endTime": 1640795400000,
                 "genre": "News",
                 "language": "English",
-                "name": "India4all - Rebuilding Lives With Oxfam",
-                "p_id": 69780097,
-                "startTime": 1640730600000,
+                "name": "Des Ki Baat",
+                "p_id": 69771173,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/2B44FC13CAD5503586E1CBAC3343B9C1905462E1.jpg"
             }
         ],
@@ -1137,18 +1137,18 @@
         "channelName": "NDTV Profit",
         "genre": "News",
         "language": "ENG",
-        "serverTime": 1640730830297
+        "serverTime": 1640792559214
     },
     "news18-india": {
         "Programs": [
             {
                 "description": "The host presents a report on the current news stories for that day in a concise manner and also intervenes at places to share his valuable insights.",
-                "endTime": 1640734200000,
+                "endTime": 1640795400000,
                 "genre": "News",
                 "language": "Hindi",
                 "name": "Sau Baat Ki Ek Baat",
-                "p_id": 69779509,
-                "startTime": 1640730600000,
+                "p_id": 69781879,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/2B44FC13CAD5503586E1CBAC3343B9C1905462E1.jpg"
             }
         ],
@@ -1156,113 +1156,113 @@
         "channelName": "News18 INDIA",
         "genre": "News",
         "language": "ENG",
-        "serverTime": 1640730829758
+        "serverTime": 1640792558740
     },
     "news24": {
         "Programs": [
             {
-                "description": "The host presents a compilation of the latest updates and developments pertaining to politics, sports, social and economic news.",
-                "endTime": 1640732400000,
+                "description": "The host collates and presents some of the most important and recent news updates and current affairs in quick succession.",
+                "endTime": 1640793360000,
                 "genre": "News",
                 "language": "Hindi",
-                "name": "News",
-                "p_id": 69779892,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/0B520DDA60A6CA28300FB313C1A7C83F4BEAD8FFH.jpg"
+                "name": "Non Stop @ 9",
+                "p_id": 69780649,
+                "startTime": 1640791560000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/2B44FC13CAD5503586E1CBAC3343B9C1905462E1.jpg"
             }
         ],
         "channelId": 2714,
         "channelName": "News24",
         "genre": "News",
         "language": "Hindi",
-        "serverTime": 1640730868929
+        "serverTime": 1640792564418
     },
     "ntv": {
         "Programs": [
             {
-                "description": "The host presents a detailed analysis of some the major news updates and happenings of the day that has made it to the headlines.",
-                "endTime": 1640736000000,
+                "description": "The host sheds light on the biggest developments that have taken place internationally and locally and also features interviews of experts and famous personalities.",
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Telugu",
-                "name": "NTV Special",
-                "p_id": 69777963,
-                "startTime": 1640716200000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/4E23A46D45C154A7855199AFBEB53C70FF4F8229R.jpg"
+                "name": "Prime Time News",
+                "p_id": 69780020,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/C99E7C54E1728B31D3A077AE28FF40AD625753863.jpg"
             }
         ],
         "channelId": 58,
         "channelName": "NTV",
         "genre": "News",
         "language": "Telugu",
-        "serverTime": 1640728343388
+        "serverTime": 1640792561247
     },
     "om-cvr": {
         "Programs": [
             {
-                "description": "A religious leader delivers a discourse stating the significance and supremacy of Lord Ayappa and offer prayers to the Almighty.",
-                "endTime": 1640732400000,
+                "description": "An expert astrologer studies the planetary positions of various sun signs and provides in-depth horoscope-based predictions.",
+                "endTime": 1640795400000,
                 "genre": "Spiritual",
                 "language": "Telugu",
-                "name": "Ayyappa Mahimalu",
-                "p_id": 69775400,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/735D09410BCD4FE67B6564A90E532838CE5D677DF.jpg"
+                "name": "Masa Phalalu",
+                "p_id": 69780924,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/C0161506A7E571C1F332FED23EB462D8E9487BFFO.jpg"
             }
         ],
         "channelId": 1028,
         "channelName": "OM CVR",
         "genre": "Spiritual",
         "language": "Telugu",
-        "serverTime": 1640730872628
+        "serverTime": 1640792567325
     },
     "peace-of-mind": {
         "Programs": [
             {
-                "description": "A spiritual expert gives a discourse on practising the proper techniques of meditation, which can help one achieve peace and health of the mind, body and soul.",
-                "endTime": 1640734200000,
+                "description": "A spiritual leader delivers a religious discourse on God's version of Murlis, the power they hold and the effect they have on humans.",
+                "endTime": 1640794500000,
                 "genre": "Spiritual",
                 "language": "Hindi",
-                "name": "Amritvela Meditation",
-                "p_id": 69780016,
-                "startTime": 1640728800000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/F8B14E4C990A609D9BF5141A6A4649E7935C221B7.jpg"
+                "name": "Aaj Ki Murli",
+                "p_id": 69774556,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/6FCE06528A0EB2946F098DE21067D55E159FF4D8A.jpg"
             }
         ],
         "channelId": 4571,
         "channelName": "Peace of Mind",
         "genre": "Entertainment",
         "language": "Hindi",
-        "serverTime": 1640728891879
+        "serverTime": 1640792553358
     },
     "people-tv": {
         "Programs": [
             {
-                "description": "The host presents updates about various socio-political issues and invites experts from various fields to shares their views about it.",
-                "endTime": 1640734200000,
+                "description": "The host presents the most recent news, updates and developments that took place in the entire day and provides coverage on current affairs.",
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Malayalam",
-                "name": "News N Views",
-                "p_id": 69777996,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/2B44FC13CAD5503586E1CBAC3343B9C1905462E1.jpg"
+                "name": "News At 9 PM",
+                "p_id": 69780731,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/A75A8E09A5A229EC9C6BDBF02B4D7AF503D98B2B2.jpg"
             }
         ],
         "channelId": 217,
         "channelName": "People TV",
         "genre": "News",
         "language": "Malayalam",
-        "serverTime": 1640730866299
+        "serverTime": 1640792562553
     },
     "pmc": {
         "Programs": [
             {
                 "description": "",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "Spiritual",
                 "language": "Telugu",
-                "name": "Program@04:00",
-                "p_id": 69885288,
-                "startTime": 1640730600000,
+                "name": "Program@21:00",
+                "p_id": 69885322,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/st-ak/370/208/yupptv/roku/images/skyworth/v5/PMC_TV_roku.jpg"
             }
         ],
@@ -1270,37 +1270,37 @@
         "channelName": "PMC",
         "genre": "Spiritual",
         "language": "Telugu",
-        "serverTime": 1640730874526
+        "serverTime": 1640792568509
     },
     "power-vision-tv": {
         "Programs": [
             {
-                "description": "A show focussing on religion or spirituality.",
-                "endTime": 1640732400000,
+                "description": "Devout musicians and singers perform devotional songs in order to celebrate the greatness and generosity of the Almighty.",
+                "endTime": 1640793600000,
                 "genre": "Spiritual",
                 "language": "Malayalam",
-                "name": "Thunnai Nirkira",
-                "p_id": 69773219,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/DBD2817588F8DD1EEEFBC88B456B555B9863CC4E9.jpg"
+                "name": "Day Of Prayer Msg",
+                "p_id": 69779462,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/297F337C0FC4578C54C2BE4A71D3919D41A4B01A4.jpg"
             }
         ],
         "channelId": 706,
         "channelName": "Power Vision TV",
         "genre": "Spiritual",
         "language": "Malayalam",
-        "serverTime": 1640730870886
+        "serverTime": 1640792566293
     },
     "raj-news": {
         "Programs": [
             {
-                "description": "The most recent news, updates and developments.",
-                "endTime": 1640736000000,
+                "description": "",
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Telugu",
-                "name": "Right Side",
-                "p_id": 69776765,
-                "startTime": 1640721600000,
+                "name": "Prime News @ 9pm",
+                "p_id": 69773393,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/2B44FC13CAD5503586E1CBAC3343B9C1905462E1.jpg"
             }
         ],
@@ -1308,18 +1308,18 @@
         "channelName": "Raj News",
         "genre": "News",
         "language": "Telugu",
-        "serverTime": 1640728358887
+        "serverTime": 1640792562894
     },
     "reporter-tv": {
         "Programs": [
             {
                 "description": "The host presents a compilation of the latest updates and developments pertaining to politics, sports, social and economic news.",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Malayalam",
                 "name": "News",
-                "p_id": 69777921,
-                "startTime": 1640730600000,
+                "p_id": 69778747,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/0B520DDA60A6CA28300FB313C1A7C83F4BEAD8FFH.jpg"
             }
         ],
@@ -1327,132 +1327,132 @@
         "channelName": "Reporter TV",
         "genre": "News",
         "language": "Malayalam",
-        "serverTime": 1640730863981
+        "serverTime": 1640792560915
     },
     "republic-bharat": {
         "Programs": [
             {
-                "description": "Magazine programme.",
-                "endTime": 1640732400000,
-                "genre": "Knowledge",
+                "description": "The host presents some of the latest and important social, political and economic news updates and stories from all over the country.",
+                "endTime": 1640793600000,
+                "genre": "News",
                 "language": "Hindi",
-                "name": "10 Mein Hai Dum",
-                "p_id": 69775872,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/DDBFD054011B4F75AC1E36A28533B2EF80D75219R.jpg"
+                "name": "Yeh Bharat Ki Baat Hai",
+                "p_id": 69775478,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/2B44FC13CAD5503586E1CBAC3343B9C1905462E1.jpg"
             }
         ],
         "channelId": 4923,
         "channelName": "Republic Bharat",
         "genre": "News",
         "language": "Hindi",
-        "serverTime": 1640730869994
+        "serverTime": 1640792565786
     },
     "republic-tv-international": {
         "Programs": [
             {
-                "description": "The host holds a debate among a panel of experts from various fields on the latest political, economic and social issues of the nation.",
-                "endTime": 1640732400000,
+                "description": "Host Arnab Goswami invites a panel of experts from different walks of life and engages in a debate surrounding issues of national and global importance.",
+                "endTime": 1640795400000,
                 "genre": "News",
                 "language": "English",
-                "name": "The Debate Late Tonight",
-                "p_id": 69767610,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/7134AD0631F6C1CD2A72D67438F8DE3BF677CB94D.jpg"
+                "name": "The Debate With Arnab Goswami At 9",
+                "p_id": 69765520,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/8E9A272D518D34B2C5D9AF77635E5406E1BD74B96.jpg"
             }
         ],
         "channelId": 4951,
         "channelName": "Republic TV International",
         "genre": "News",
         "language": "ENG",
-        "serverTime": 1640730828711
+        "serverTime": 1640792557888
     },
     "rishtey-cineplex-uk": {
         "Programs": [
             {
-                "description": "Damini witnesses her housemaid being raped by her brother-in-law and his friends. Despite facing many obstacles, she strives to get justice for her with the help of her husband and Govind, a lawyer.",
-                "endTime": 1640734140000,
+                "description": "A journalist is sent off to a remote island to cover an investigative story. He finds himself in trouble when the underworld gangsters unite to kill him.",
+                "endTime": 1640800800000,
                 "genre": "OTHER",
                 "language": "Hindi",
-                "name": "Damini",
-                "p_id": 69779707,
-                "startTime": 1640721960000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/3388E8D9882F870B5DDB64E8CEE2903E4DD5D66EK.jpg"
+                "name": "Elaan",
+                "p_id": 69773011,
+                "startTime": 1640790060000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/6637A7B8F510B657E383A7ABC8F10CA5E89FCC1FP.jpg"
             }
         ],
         "channelId": 3607,
         "channelName": "Colors Cineplex UK",
         "genre": "Entertainment",
         "language": "Hindi",
-        "serverTime": 1640727728247
+        "serverTime": 1640792552148
     },
     "russia-today": {
         "Programs": [
             {
-                "description": "The host invites guests to unravel the secrets behind the global economic and financial crises, including stories that made headlines.",
-                "endTime": 1640732400000,
-                "genre": "Business & Finance",
+                "description": "The host invites a panel of experts from different fields to share their views and opinions on important topics related to current issues.",
+                "endTime": 1640793600000,
+                "genre": "News",
                 "language": "English",
-                "name": "Keiser Report",
-                "p_id": 69780427,
-                "startTime": 1640730540000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/D50CAF2B367226146987756B81DFFD682AC1D0070.jpg"
+                "name": "Cross Talk",
+                "p_id": 69780576,
+                "startTime": 1640791740000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/52F960438E6A913F395899ABF4116F034D6C5CAF.png"
             }
         ],
         "channelId": 2615,
         "channelName": "Russia Today",
         "genre": "News",
         "language": "ENG",
-        "serverTime": 1640730830830
+        "serverTime": 1640792559555
     },
     "sakshi-tv": {
         "Programs": [
             {
-                "description": "The host sheds light on top stories, latest happenings and recent updated from Indians living in different parts of the world.",
-                "endTime": 1640734200000,
+                "description": "The program features recent news, updates and developments.",
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Telugu",
-                "name": "NRI News",
-                "p_id": 69781491,
-                "startTime": 1640718000000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/8CA78FFEE76922F81FF008D40064C4C95004F72A2.jpg"
+                "name": "News 360",
+                "p_id": 69779604,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/7E453010055D870827E8CD5412C7322FC98CF096.jpg"
             }
         ],
         "channelId": 61,
         "channelName": "Sakshi TV",
         "genre": "News",
         "language": "Telugu",
-        "serverTime": 1640728341757
+        "serverTime": 1640792561082
     },
     "samay": {
         "Programs": [
             {
-                "description": "Various events and incidents are covered in this news bulletin.",
-                "endTime": 1640737800000,
+                "description": "The host presents the latest political, socio-economic, cultural and sports updates and events from India and around the world.",
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Hindi",
-                "name": "Bulletin",
-                "p_id": 69735913,
-                "startTime": 1640714400000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/5CFB465D47D04CCC2940EA0E61A846B9A0104FE1M.jpg"
+                "name": "Prime 9",
+                "p_id": 69781341,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/82DCDD121B011D13BD0DD17A71CC290AFECB35F0J.jpg"
             }
         ],
         "channelId": 139,
         "channelName": "Samay",
         "genre": "News",
         "language": "Hindi",
-        "serverTime": 1640728376288
+        "serverTime": 1640792564583
     },
     "samay-aalami": {
         "Programs": [
             {
                 "description": "The anchor presents a round-up of all the latest social, political and economic updates and developments that are making headlines in the country.",
-                "endTime": 1640737800000,
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Others",
                 "name": "Khabarnama",
-                "p_id": 69740334,
-                "startTime": 1640714400000,
+                "p_id": 69781840,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/CD7AD597A30303E5B933F6EC72941BBDF4B8B255A.jpg"
             }
         ],
@@ -1460,18 +1460,18 @@
         "channelName": "Samay Aalami",
         "genre": "News",
         "language": "Hindi",
-        "serverTime": 1640728384028
+        "serverTime": 1640792565415
     },
     "samay-bihar": {
         "Programs": [
             {
                 "description": "The host talks about the latest socio-economic and political news, updates and developments from various parts of the world.",
-                "endTime": 1640734200000,
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Bhojpuri",
                 "name": "Samay Samachar",
-                "p_id": 69782372,
-                "startTime": 1640730600000,
+                "p_id": 69781813,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/B7EA09E2A0D14EA2BB1D1FEF4E943BAFA83D8F972.jpg"
             }
         ],
@@ -1479,37 +1479,37 @@
         "channelName": "Samay Bihar",
         "genre": "News",
         "language": "Hindi",
-        "serverTime": 1640730869729
+        "serverTime": 1640792565096
     },
     "samay-mp": {
         "Programs": [
             {
-                "description": "A news bulletin, which keeps the viewers updated with the latest regional and national news.",
-                "endTime": 1640737800000,
+                "description": "The anchor presents the latest news updates and happenings from the world of politics, economics, entertainment and sports.",
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Hindi",
-                "name": "News Bulletin",
-                "p_id": 69742239,
-                "startTime": 1640712600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/8A4F7A7B67E468330526D9B34C3A16133E07CEDAB.jpg"
+                "name": "Is Samay",
+                "p_id": 69782336,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/3A8DDEA638444203AC75276BAD950C0D3185C1018.jpg"
             }
         ],
         "channelId": 319,
         "channelName": "Samay MP",
         "genre": "News",
         "language": "Hindi",
-        "serverTime": 1640728385528
+        "serverTime": 1640792565571
     },
     "samay-rajasthan": {
         "Programs": [
             {
                 "description": "This program highlights the top story of the day that concerns and aims to throw light on the hidden aspects behind it.",
-                "endTime": 1640734200000,
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Hindi",
                 "name": "Badi Khabar",
-                "p_id": 69781526,
-                "startTime": 1640730600000,
+                "p_id": 69782075,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/0F215F3FF79B4C0073588D0579991B0EC4F94879L.jpg"
             }
         ],
@@ -1517,113 +1517,113 @@
         "channelName": "Samay Rajasthan",
         "genre": "News",
         "language": "Hindi",
-        "serverTime": 1640730869462
+        "serverTime": 1640792564922
     },
     "samay-up": {
         "Programs": [
             {
-                "description": "The host presents a round-up of the recent news, events, updates and developments.",
-                "endTime": 1640732400000,
+                "description": "In a live telecast, the host presents the most recent news, updates and developments from the state of Uttar Pradesh, India.",
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Hindi",
-                "name": "Final Report",
-                "p_id": 69772483,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/56156E4C4DBDCB426217246893439B98E9D725089.jpg"
+                "name": "UP Live",
+                "p_id": 69770925,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/6E025DC666AD6BCF95B0EE757E5E31577E1B2F32T.jpg"
             }
         ],
         "channelId": 142,
         "channelName": "Samay UP",
         "genre": "News",
         "language": "Hindi",
-        "serverTime": 1640730869204
+        "serverTime": 1640792564750
     },
     "sangeet-bhojpuri": {
         "Programs": [
             {
-                "description": "A comprehensive compilation of devotional songs sung to express veneration for divine figures in a bid to imbibe a sense of peace and calm in devotees.",
-                "endTime": 1640745000000,
-                "genre": "Spiritual",
+                "description": "An entertaining compilation of popular songs from Hindi films performed by various musicians and artists to delight audiences.",
+                "endTime": 1640795400000,
+                "genre": "Music",
                 "language": "Bhojpuri",
-                "name": "Aaradhana",
-                "p_id": 69770453,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/DA93BDA34D36E5FDDADCF40B242BF47EA1795798C.jpg"
+                "name": "Garam Masala",
+                "p_id": 69769347,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/6024B7FB18F3EFD9D870074E4E27307E550C879D8.jpg"
             }
         ],
         "channelId": 3488,
         "channelName": "Sangeet Bhojpuri",
         "genre": "Music",
         "language": "Hindi",
-        "serverTime": 1640730827916
+        "serverTime": 1640792557168
     },
     "sanskar-tv": {
         "Programs": [
             {
-                "description": "Presently, there are several diseases which don't have any cure but scientist Munir Khan of Mumbai, has discovered a new hope and cure for all non-curable disease, by a method known as Body Revive.",
-                "endTime": 1640734200000,
+                "description": "Baba Ramdev demonstrates various yoga asanas that enable one to lead a healthy and stress-free life.",
+                "endTime": 1640795400000,
                 "genre": "Fashion & Lifestyle",
                 "language": "Hindi",
-                "name": "Prakrutik Chikitsa",
-                "p_id": 69772022,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/AFE1A798EA754E4062ED01806947C4F953DA818FP.jpg"
+                "name": "Yogrishi Swami Ramdevji Maharaj",
+                "p_id": 69772328,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/0A881B5567C850325C96FBCA3C49B7750DBF68E5D.jpg"
             }
         ],
         "channelId": 2162,
         "channelName": "Sanskar TV",
         "genre": "Spiritual",
         "language": "Hindi",
-        "serverTime": 1640730872365
+        "serverTime": 1640792567157
     },
     "satsang-tv": {
         "Programs": [
             {
-                "description": "Religious leaders and devotees sing melodious bhajans to express their veneration for God and to become one with the Almighty.",
-                "endTime": 1640731800000,
+                "description": "A religious leader delivers a discourse on how an individual can live a pious life by merely following the precepts of Hinduism.",
+                "endTime": 1640793000000,
                 "genre": "Spiritual",
                 "language": "Hindi",
-                "name": "Suprabhat",
-                "p_id": 69779971,
-                "startTime": 1640730000000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/FF81F057E3C42E22E56F9B63BAF3405EAE1720A2.jpg"
+                "name": "Satsang-Amrit",
+                "p_id": 69781624,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/D3CE51715691E83FE0C0D7F8803E24ECFBA929D89.jpg"
             }
         ],
         "channelId": 4235,
         "channelName": "Satsang TV",
         "genre": "Spiritual",
         "language": "Hindi",
-        "serverTime": 1640730871801
+        "serverTime": 1640792566805
     },
     "shalom-tv": {
         "Programs": [
             {
                 "description": "",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "Spiritual",
                 "language": "Malayalam",
-                "name": "Color Of God",
-                "p_id": 69771886,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/CCE45C8C15D3A0F04E295AA355FA590F260081AA3.jpg"
+                "name": "Noyal Night",
+                "p_id": 69772786,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/4B629A43550ED524ABA7F6B7E78FDA5B3775AAF15.jpg"
             }
         ],
         "channelId": 705,
         "channelName": "Shalom TV",
         "genre": "Spiritual",
         "language": "Malayalam",
-        "serverTime": 1640730871154
+        "serverTime": 1640792566464
     },
     "songdew": {
         "Programs": [
             {
                 "description": "",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "Music",
                 "language": "Hindi",
-                "name": "Program@04:00",
-                "p_id": 69879583,
-                "startTime": 1640730600000,
+                "name": "Program@21:00",
+                "p_id": 69879617,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/st-ak/370/208/yupptv/roku/images/skyworth/v5/songdew_tv_roku.jpg"
             }
         ],
@@ -1631,37 +1631,37 @@
         "channelName": "Songdew",
         "genre": "Music",
         "language": "Hindi",
-        "serverTime": 1640730827670
+        "serverTime": 1640792556995
     },
     "star-bharat-uk": {
         "Programs": [
             {
-                "description": "Jaya marries Neeraj and enters his house after all the ceremonies. However, the next day, the couple receives a bomb as a gift which kills Neeraj and his grandmother.",
-                "endTime": 1640734200000,
+                "description": "Krishna, a mischievous boy and cow herder, earns the nickname 'makhan chor' owing to his pranks. He grows up to become a divine figure in Hinduism.",
+                "endTime": 1640793600000,
                 "genre": "Entertainment",
                 "language": "Hindi",
-                "name": "Savdhaan India : Nayaa Season",
-                "p_id": 69779411,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/078837E96CAA93429A769CB79275900C1BFC7D392.jpg"
+                "name": "Haathi Ghoda Paal Ki Jai Kanhaiya Laal Ki",
+                "p_id": 69777723,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/1154A817DC9F1A4E28B71E5D7A73E7C09DA6792BT.jpg"
             }
         ],
         "channelId": 2813,
         "channelName": "Star Bharat UK",
         "genre": "Entertainment",
         "language": "Hindi",
-        "serverTime": 1640730822886
+        "serverTime": 1640792551884
     },
     "star-plus-uk": {
         "Programs": [
             {
                 "description": "Imlie, a smart village belle, is forced to marry a journalist after they seek shelter in a hut during heavy rains. On reaching the city, she realises that her husband is engaged to be married.",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "Entertainment",
                 "language": "Hindi",
                 "name": "Imlie",
-                "p_id": 69780160,
-                "startTime": 1640730600000,
+                "p_id": 69778575,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/59A9215E5DE13ABF4B05C59A6C87768AD61CA608M.jpg"
             }
         ],
@@ -1669,94 +1669,94 @@
         "channelName": "Star Plus UK",
         "genre": "Entertainment",
         "language": "Hindi",
-        "serverTime": 1640730821563
+        "serverTime": 1640792550938
     },
     "sudarshan-news": {
         "Programs": [
             {
-                "description": "This program is yet to be announced by this channel.",
-                "endTime": 1640737800000,
-                "genre": "Entertainment",
+                "description": "The host invites a panel of experts from different fields to share their views and opinions on important topics related to current issues.",
+                "endTime": 1640793600000,
+                "genre": "News",
                 "language": "Hindi",
-                "name": "TBA",
-                "p_id": 69731871,
-                "startTime": 1640712600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/9F6E2FC62870A41CBEB637377AF12BA20E674D73U.jpg"
+                "name": "Prime Time",
+                "p_id": 69773852,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/2D5A56AE8587857D94CEA5EA54112E039DAA786B5.jpg"
             }
         ],
         "channelId": 599,
         "channelName": "Sudarshan News",
         "genre": "News",
         "language": "Hindi",
-        "serverTime": 1640728382576
+        "serverTime": 1640792565262
     },
     "svbc": {
         "Programs": [
             {
-                "description": "The live telecast of the various rites and rituals conducted at the famous hill shrine of Lord Venkateswara at Tirumala.",
-                "endTime": 1640734800000,
+                "description": "This show features spiritual discourses and interpretation of 'Andhra Mahabharatam' by Sri Chaganti Koteshwara Rao, a well-known pundit.",
+                "endTime": 1640793600000,
                 "genre": "Spiritual",
                 "language": "Telugu",
-                "name": "Archana Live",
-                "p_id": 69770667,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/03DAC46F7AF5230DACEDC087D2D2B1C48E0BA80E.jpg"
+                "name": "Andhra Maha Bharatam",
+                "p_id": 69768571,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/7E050E2163E41760673D4D800F315563B401FF0BS.jpg"
             }
         ],
         "channelId": 13,
         "channelName": "SVBC",
         "genre": "Spiritual",
         "language": "Telugu",
-        "serverTime": 1640730870620
+        "serverTime": 1640792566124
     },
     "t-news": {
         "Programs": [
             {
-                "description": "The host presents the latest and some of the most important social, political and economic news updates and developments from across the state, live.",
-                "endTime": 1640732400000,
-                "genre": "News",
+                "description": "The host presents the latest news updates and gossip from the fields of political, economic and sports in a satirical manner.",
+                "endTime": 1640793600000,
+                "genre": "Entertainment",
                 "language": "Telugu",
-                "name": "Namasthe Telangana Live",
-                "p_id": 69768967,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/53C91E6036FE72E620F5C489C2D024078246BA6C1.jpg"
+                "name": "Dhoom Dham Muchata",
+                "p_id": 69772975,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/33DCE6313420F9C19445CEE680DB00EE1CEB8ED0F.jpg"
             }
         ],
         "channelId": 198,
         "channelName": "T News",
         "genre": "News",
         "language": "Telugu",
-        "serverTime": 1640730865308
+        "serverTime": 1640792561904
     },
     "t-sat-nipuna": {
         "Programs": [
             {
-                "description": "An academic expert teaches a course designed to help students understand the various concepts in the subject of mathematics.",
-                "endTime": 1640734200000,
-                "genre": "OTHER",
+                "description": "An expert presents a detailed discussion of the general studies syllabus and explains the various concepts in it with appropriate examples.",
+                "endTime": 1640795400000,
+                "genre": "Knowledge",
                 "language": "Telugu",
-                "name": "ELEMENTARY MATHEMATICS",
-                "p_id": 69779028,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/B0DF5F62972F2CE2A13E1AFB75BD256DD518F25CX.jpg"
+                "name": "General Studies",
+                "p_id": 69781522,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/221EB16185A12D209C283F308D111F53B325EEAEG.jpg"
             }
         ],
         "channelId": 2670,
         "channelName": "T-SAT Nipuna",
         "genre": "Spiritual",
         "language": "Telugu",
-        "serverTime": 1640730874793
+        "serverTime": 1640792568670
     },
     "tana-prapancha-sahitya-vedika": {
         "Programs": [
             {
                 "description": "",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "Entertainment",
                 "language": "Telugu",
-                "name": "Program@04:00",
-                "p_id": 69886008,
-                "startTime": 1640730600000,
+                "name": "Program@21:00",
+                "p_id": 69886042,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/st-ak/370/208/yupptv/roku/images/skyworth/v5/vod/TANA_Prapancha_Sahitya_Vedika_TV_roku_VOD.jpg"
             }
         ],
@@ -1764,37 +1764,37 @@
         "channelName": "TANA Prapancha Sahitya Vedika",
         "genre": "Entertainment",
         "language": "Telugu",
-        "serverTime": 1640730825499
+        "serverTime": 1640792553872
     },
     "tez-tv": {
         "Programs": [
             {
-                "description": "The host collates and presents some of the recent and important news updates and developments of the day in quick succession.",
-                "endTime": 1640732400000,
-                "genre": "News",
+                "description": "The host talks about ordinary citizens with extraordinary stories who have contributed to society in various unique ways.",
+                "endTime": 1640794920000,
+                "genre": "Entertainment",
                 "language": "Hindi",
-                "name": "GNT Express",
-                "p_id": 69768949,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/2B44FC13CAD5503586E1CBAC3343B9C1905462E1.jpg"
+                "name": "Desh Ki Baat Sunata Hoon",
+                "p_id": 69766984,
+                "startTime": 1640791620000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/E79DBF81AEDFE2D87B0C8B274C07661EC10B6BA73.jpg"
             }
         ],
         "channelId": 2165,
         "channelName": "Good News Today",
         "genre": "News",
         "language": "Hindi",
-        "serverTime": 1640730867894
+        "serverTime": 1640792563744
     },
     "times-now-navbharat-": {
         "Programs": [
             {
-                "description": "Representatives of political parties answer questions asked by the public on the latest and the most relevant social, political and economic issues.",
-                "endTime": 1640734200000,
+                "description": "",
+                "endTime": 1640795400000,
                 "genre": "News",
                 "language": "Hindi",
-                "name": "Sawaal Public Ka",
-                "p_id": 69778296,
-                "startTime": 1640730600000,
+                "name": "News Ki Paathshaala",
+                "p_id": 69777952,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/2B44FC13CAD5503586E1CBAC3343B9C1905462E1.jpg"
             }
         ],
@@ -1802,18 +1802,18 @@
         "channelName": "Times Now Navbharat",
         "genre": "News",
         "language": "Hindi",
-        "serverTime": 1640730867350
+        "serverTime": 1640792563407
     },
     "timesnow": {
         "Programs": [
             {
-                "description": "The hosts invite a panel of experts to engage in a debate and discuss various issues pertaining to the political, social and economic issues of the nation.",
-                "endTime": 1640737800000,
+                "description": "The host invites prominent personalities from various fields and holds a debate with them on several social and political issues.",
+                "endTime": 1640795400000,
                 "genre": "News",
                 "language": "English",
-                "name": "The Newshour First",
-                "p_id": 69771988,
-                "startTime": 1640727000000,
+                "name": "The Newshour @ 9",
+                "p_id": 69768637,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/2B44FC13CAD5503586E1CBAC3343B9C1905462E1.jpg"
             }
         ],
@@ -1821,113 +1821,113 @@
         "channelName": "Timesnow",
         "genre": "News",
         "language": "ENG",
-        "serverTime": 1640728070270
+        "serverTime": 1640792558408
     },
     "tv5": {
         "Programs": [
             {
-                "description": "A compilation of songs, popular scenes, dialogues and dances from renowned yesteryear movies.",
-                "endTime": 1640732400000,
-                "genre": "Entertainment",
+                "description": "The host presents numerous top stories, latest happenings and significant updates from the national and international front.",
+                "endTime": 1640797200000,
+                "genre": "News",
                 "language": "Telugu",
-                "name": "Favourite 5",
-                "p_id": 69769063,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/CD66360C1622DBFFA84785CB07A3FD377142EC4DK.jpg"
+                "name": "Big News",
+                "p_id": 69772418,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/17990CD984AF7B3D3D7199366DEF712D76A15C49M.jpg"
             }
         ],
         "channelId": 115,
         "channelName": "TV5",
         "genre": "News",
         "language": "Telugu",
-        "serverTime": 1640730863729
+        "serverTime": 1640792560741
     },
     "tv9-news": {
         "Programs": [
             {
-                "description": "The host sheds light on the latest socio-economic, political as well as sports updates and developments from across the world.",
-                "endTime": 1640734200000,
+                "description": "The host presents the top nine news stories and updates pertaining to various social, political and economic issues of the day.",
+                "endTime": 1640793480000,
                 "genre": "News",
                 "language": "Telugu",
-                "name": "Super Prime Time",
-                "p_id": 69779412,
-                "startTime": 1640731500000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/C3EB53309B2BD1573DC1B340398BF9FAC872B873S.jpg"
+                "name": "Top 9 News",
+                "p_id": 69780316,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/86CBA062E5776EB88C53C1AA675343FD23BE3502P.jpg"
             }
         ],
         "channelId": 1317,
         "channelName": "TV9 News",
         "genre": "News",
         "language": "Telugu",
-        "serverTime": 1640731617468
+        "serverTime": 1640792559721
     },
     "v6-news": {
         "Programs": [
             {
-                "description": "People from the city of Hyderabad talk about how, despite their diverse history, culture and religions, they live together in peace and harmony.",
-                "endTime": 1640734200000,
-                "genre": "Entertainment",
+                "description": "The host presents a comprehensive news bulletin comprising the latest regional and national events, updates and developments.",
+                "endTime": 1640793600000,
+                "genre": "News",
                 "language": "Telugu",
-                "name": "Hamara Hyderabad",
-                "p_id": 69765052,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/52EF4056454F4E0A948E5046499C2A9539FD00914.jpg"
+                "name": "News Junction",
+                "p_id": 69765061,
+                "startTime": 1640791680000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/B5D181086E9EE53B46C926391D678490DD11ABF4.jpg"
             }
         ],
         "channelId": 447,
         "channelName": "V6 News",
         "genre": "News",
         "language": "Telugu",
-        "serverTime": 1640730864594
+        "serverTime": 1640792561579
     },
     "vedic": {
         "Programs": [
             {
-                "description": "A religious leader addresses a large gathering of devotees and educates them on various aspects of spirituality and religion.",
-                "endTime": 1640734200000,
+                "description": "Spiritual leader Dr Nagendra Neerajji delivers a discourse to the devotees on how to find peace and happiness in one's life.",
+                "endTime": 1640793600000,
                 "genre": "Spiritual",
                 "language": "Hindi",
-                "name": "Pujya Acharya Pradyumn Ji Maharaj",
-                "p_id": 69765176,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/8280EB69D598BF8669ACA668D67D6AA90F3F89C31.jpg"
+                "name": "Dr. Nagendra Neerajji",
+                "p_id": 69765153,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/821CF084B0DF27FD98B79FD162080B71A7918D865.jpg"
             }
         ],
         "channelId": 3925,
         "channelName": "Vedic",
         "genre": "Spiritual",
         "language": "Hindi",
-        "serverTime": 1640730875989
+        "serverTime": 1640792569510
     },
     "wow-kidz-hindi": {
         "Programs": [
             {
-                "description": "Chacha Bhatija",
-                "endTime": 1640734200000,
+                "description": "VIR The Robot Boy",
+                "endTime": 1640793600000,
                 "genre": "Entertainment",
                 "language": "Hindi",
-                "name": "Chacha Bhatija",
-                "p_id": 69836770,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://ndtvimages.yuppcdn.net/images/movies/yuppmovies_Chacha_Bhatija.jpg"
+                "name": "VIR The Robot Boy",
+                "p_id": 69836788,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://ndtvimages.yuppcdn.net/images/movies/yuppmovies_Vir.jpg"
             }
         ],
         "channelId": 4002,
         "channelName": "WOW Kidz-Hindi",
         "genre": "Entertainment",
         "language": "Hindi",
-        "serverTime": 1640730823215
+        "serverTime": 1640792552492
     },
     "yupptv-veda": {
         "Programs": [
             {
                 "description": "Bhagavad Gita",
-                "endTime": 1640737800000,
+                "endTime": 1640797200000,
                 "genre": "Spiritual",
                 "language": "Telugu",
                 "name": "Bhagavad Gita",
-                "p_id": 69837385,
-                "startTime": 1640730600000,
+                "p_id": 69837399,
+                "startTime": 1640790000000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/tv/480/270/languages/veda_tv.jpg"
             }
         ],
@@ -1935,18 +1935,18 @@
         "channelName": "YUPPTV VEDA",
         "genre": "Spiritual",
         "language": "Telugu",
-        "serverTime": 1640730872105
+        "serverTime": 1640792566974
     },
     "zee-business": {
         "Programs": [
             {
                 "description": "",
-                "endTime": 1640732160000,
+                "endTime": 1640793360000,
                 "genre": "News",
                 "language": "Hindi",
-                "name": "India 360",
-                "p_id": 69767286,
-                "startTime": 1640730360000,
+                "name": "Khabar Chalisa",
+                "p_id": 69773683,
+                "startTime": 1640791560000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/2B44FC13CAD5503586E1CBAC3343B9C1905462E1.jpg"
             }
         ],
@@ -1954,56 +1954,56 @@
         "channelName": "Zee Business",
         "genre": "News",
         "language": "Hindi",
-        "serverTime": 1640730867095
+        "serverTime": 1640792563243
     },
     "zee-cinema-uk": {
         "Programs": [
             {
-                "description": "Raja, the son of a rich Hindu businessman, falls in love with Bobby, a poor Catholic girl. Though their families try to keep them away from each other, they strive to be together.",
-                "endTime": 1640737200000,
+                "description": "Zafar's obsession with Salma causes the destruction of her family and her mental breakdown. Years later, fate unites her sons, Iqbal and Sunny, and they set out to save Salma from Zafar's captivity.",
+                "endTime": 1640800800000,
                 "genre": "OTHER",
                 "language": "Hindi",
-                "name": "Bobby",
-                "p_id": 69774560,
-                "startTime": 1640724300000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/6DB6B2376EC75338BF50DF7B17A9147C4AA25A79O.jpg"
+                "name": "Coolie",
+                "p_id": 69876917,
+                "startTime": 1640787300000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/D4C96DF491A51C65D202342EF7CBB6B779DFD35AD.jpg"
             }
         ],
         "channelId": 569,
         "channelName": "Zee Cinema UK",
         "genre": "Movies",
         "language": "Hindi",
-        "serverTime": 1640728039176
+        "serverTime": 1640792555186
     },
     "zee-cinema-us": {
         "Programs": [
             {
-                "description": "Raja, the son of a rich Hindu businessman, falls in love with Bobby, a poor Catholic girl. Though their families try to keep them away from each other, they strive to be together.",
-                "endTime": 1640737200000,
+                "description": "Zafar's obsession with Salma causes the destruction of her family and her mental breakdown. Years later, fate unites her sons, Iqbal and Sunny, and they set out to save Salma from Zafar's captivity.",
+                "endTime": 1640800800000,
                 "genre": "OTHER",
                 "language": "Hindi",
-                "name": "Bobby",
-                "p_id": 69774560,
-                "startTime": 1640724300000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/6DB6B2376EC75338BF50DF7B17A9147C4AA25A79O.jpg"
+                "name": "Coolie",
+                "p_id": 69876917,
+                "startTime": 1640787300000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/D4C96DF491A51C65D202342EF7CBB6B779DFD35AD.jpg"
             }
         ],
         "channelId": 569,
         "channelName": "Zee Cinema UK",
         "genre": "Movies",
         "language": "Hindi",
-        "serverTime": 1640728039176
+        "serverTime": 1640792555186
     },
     "zee-classic": {
         "Programs": [
             {
                 "description": "",
-                "endTime": 1640732400000,
+                "endTime": 1640793600000,
                 "genre": "Movies",
                 "language": "Hindi",
-                "name": "Program@04:00",
-                "p_id": 69888856,
-                "startTime": 1640730600000,
+                "name": "Program@21:00",
+                "p_id": 69888890,
+                "startTime": 1640791800000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/st-ak/370/208/yupptv/roku/images/skyworth/v5/Zee-Classic.jpg"
             }
         ],
@@ -2011,113 +2011,113 @@
         "channelName": "Zee Classic",
         "genre": "Movies",
         "language": "Hindi",
-        "serverTime": 1640730826482
+        "serverTime": 1640792554370
     },
     "zee-news": {
         "Programs": [
             {
-                "description": "Various events and incidents are covered in this news bulletin.",
-                "endTime": 1640732400000,
+                "description": "",
+                "endTime": 1640793600000,
                 "genre": "News",
                 "language": "Hindi",
-                "name": "Bulletin",
-                "p_id": 69774787,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/5CFB465D47D04CCC2940EA0E61A846B9A0104FE1M.jpg"
+                "name": "Daily News & Analysis",
+                "p_id": 69774680,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/DF56C08E5B965222D48A4F46DD48A9661F320775.jpg"
             }
         ],
         "channelId": 1501,
         "channelName": "Zee News",
         "genre": "News",
         "language": "Hindi",
-        "serverTime": 1640730868673
+        "serverTime": 1640792564250
     },
     "zee-tv": {
         "Programs": [
             {
-                "description": "Niyati, a young nurse, takes on the onus of looking after Abhimanyu, a mentally unstable patient, to help him overcome his illness. However, she soon learns about Abhimanyu's dark past.",
-                "endTime": 1640732400000,
+                "description": "",
+                "endTime": 1640793600000,
                 "genre": "Entertainment",
                 "language": "Hindi",
-                "name": "Agar Tum Na Hote",
-                "p_id": 69775524,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/BCC26772FEC54FA1FFFEDC2CAFDB85F2F601A8F5Z.jpg"
+                "name": "Kashibai Bajirao Ballal",
+                "p_id": 69776890,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/C8D81472AA7CCC04BC692FDAE89823090F51A651J.jpg"
             }
         ],
         "channelId": 556,
         "channelName": "Zee TV UK",
         "genre": "Entertainment",
         "language": "Hindi",
-        "serverTime": 1640730822394
+        "serverTime": 1640792551654
     },
     "zee-tv-uk": {
         "Programs": [
             {
-                "description": "Niyati, a young nurse, takes on the onus of looking after Abhimanyu, a mentally unstable patient, to help him overcome his illness. However, she soon learns about Abhimanyu's dark past.",
-                "endTime": 1640732400000,
+                "description": "",
+                "endTime": 1640793600000,
                 "genre": "Entertainment",
                 "language": "Hindi",
-                "name": "Agar Tum Na Hote",
-                "p_id": 69775524,
-                "startTime": 1640730600000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/BCC26772FEC54FA1FFFEDC2CAFDB85F2F601A8F5Z.jpg"
+                "name": "Kashibai Bajirao Ballal",
+                "p_id": 69776890,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/C8D81472AA7CCC04BC692FDAE89823090F51A651J.jpg"
             }
         ],
         "channelId": 556,
         "channelName": "Zee TV UK",
         "genre": "Entertainment",
         "language": "Hindi",
-        "serverTime": 1640730822394
+        "serverTime": 1640792551654
     },
     "zing-tv-us": {
         "Programs": [
             {
-                "description": "A comprehensive compilation of some of the popular songs written, recorded and sung by renowned musicians is played back to back.",
-                "endTime": 1640732400000,
+                "description": "A non-stop playlist of catchy and entertaining songs from the latest blockbuster Bollywood movies to delight listeners and fans.",
+                "endTime": 1640793600000,
                 "genre": "Music",
                 "language": "Hindi",
-                "name": "Beat Box",
-                "p_id": 69778450,
-                "startTime": 1640728800000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/190CA0A780F6D21BAAE4B6C061EF635161855CDAY.jpg"
+                "name": "Rise Up",
+                "p_id": 69779819,
+                "startTime": 1640790000000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/0418FFDCF52DE8082821CE4E0C51A07C05084A4EG.jpg"
             }
         ],
         "channelId": 389,
         "channelName": "Zing TV US",
         "genre": "Music",
         "language": "Hindi",
-        "serverTime": 1640728913881
+        "serverTime": 1640792557555
     },
     "zoom": {
         "Programs": [
             {
-                "description": "Back-to-back music.",
-                "endTime": 1640737800000,
+                "description": "A comprehensive compilation of some of the most popular songs from Bollywood movies performed by talented artists, played back to back.",
+                "endTime": 1640799000000,
                 "genre": "Music",
                 "language": "Hindi",
-                "name": "Nightout",
-                "p_id": 69779685,
-                "startTime": 1640723400000,
-                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/260ACA4CC2C4D0C92D5F558C567563C38C1ED3A58.jpg"
+                "name": "Toofani Hits",
+                "p_id": 69778454,
+                "startTime": 1640791800000,
+                "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/69A9850401900EE3D7F5E2C65C28E63C6E1C5526B.jpg"
             }
         ],
         "channelId": 15,
         "channelName": "Zoom",
         "genre": "Music",
         "language": "Hindi",
-        "serverTime": 1640728047860
+        "serverTime": 1640792556189
     },
     "zoom-uk": {
         "Programs": [
             {
                 "description": "A comprehensive compilation of some of the most popular songs from Bollywood movies performed by talented artists, played back to back.",
-                "endTime": 1640732400000,
+                "endTime": 1640797200000,
                 "genre": "Music",
                 "language": "Hindi",
                 "name": "Toofani Hits",
-                "p_id": 69801752,
-                "startTime": 1640725200000,
+                "p_id": 69858742,
+                "startTime": 1640790000000,
                 "thumbnailUrl": "https://d229kpbsb5jevy.cloudfront.net/woi2/400/300/dasimages/landscape/360x270/69A9850401900EE3D7F5E2C65C28E63C6E1C5526B.jpg"
             }
         ],
@@ -2125,6 +2125,6 @@
         "channelName": "Zoom UK",
         "genre": "Music",
         "language": "Hindi",
-        "serverTime": 1640728054379
+        "serverTime": 1640792556847
     }
 }
