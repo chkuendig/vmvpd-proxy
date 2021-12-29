@@ -19,7 +19,7 @@ class FakeResponse(requests.Response):
         self.encoding = 'utf-8'
 
 class PluginVMVPD:
-    
+    streams_file = ""
     def __init__(self):
         return
 
@@ -91,7 +91,7 @@ class PluginVMVPD:
         ''' only returns updated channels'''
         channels = self.get_all_channels()
         logger.info("refresh_epg")
-        xmltv_file = "tmp/"+self.getName()+".xmltv"
+        xmltv_file = "tmp/"+self.getName()+".xml"
         xmlTvRoot = etree.Element("tv")
         xmlTvRootNew = etree.Element("tv")
 
@@ -124,7 +124,6 @@ class PluginVMVPD:
                     xmlTvRootNew.append(programmeElem)
                 xmlTvRootNew.append(channelElem)
            
-        
             if(programmeElem is not None ):
                 xmlTvRoot.append(programmeElem)
             xmlTvRoot.append(channelElem)

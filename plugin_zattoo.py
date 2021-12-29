@@ -1,7 +1,8 @@
 
 from plugin_streamlink import PluginSteamlink, FakeResponse
 
-
+from streamlink.plugin.api import validate
+from streamlink.plugins.zattoo import Zattoo
 import requests
 import re
 import os
@@ -12,13 +13,12 @@ from lxml.etree import HTMLParser
 from lxml.cssselect import CSSSelector
 from streamlink.plugin.api.http_session import HTTPSession
 from streamlink.plugin.api import useragents
-from streamlink_cli.utils import JSONEncoder
 from streamlink import NoPluginError, PluginError, StreamError, Streamlink, __version__ as streamlink_version
 
 from urllib.parse import urlparse, parse_qs
 from datetime import timezone, datetime, timedelta
 html_parser = HTMLParser()
-logger = logging.getLogger()
+log = logging.getLogger(__name__)
 
 
 class CachedHTTPSession(HTTPSession):
@@ -26,18 +26,18 @@ class CachedHTTPSession(HTTPSession):
 
     def request(self, method, url, *args, **kwargs):
         # check if this is a request for the html page so we can directly return the manifest url if it's still valid
-        channel_regex = r'https?://(?:www\.)?yupptv\.com/channels/([a-z\-]+)/live'
+        channel_regex = r'https?://(?:www\.)?zattoo\.com/channels/?channel=([a-z\-]+)'
         match = re.match(channel_regex, url)
         if match:
             channel_name = match.group(1)
             if(channel_name in self.all_streams and self.all_streams[channel_name]["expiry"] > datetime.now().timestamp()+600):
                 fakeResponse = FakeResponse()
-                fakeResponse.setText( "streamUrl=[{src: \"" + \
-                    self.all_streams[channel_name]["url"] + \
-                    "\" , title: '', description: ''}]")
+                fakeResponse.setText("streamUrl=[{src: \"" +
+                                     self.all_streams[channel_name]["url"] +
+                                     "\" , title: '', description: ''}]")
                 return fakeResponse
             else:
-                logger.info("%s fetch tv page for real" % channel_name)
+                log.info("%s fetch tv page for real" % channel_name)
         return super().request(method, url, *args, **kwargs)
 
 
@@ -47,28 +47,38 @@ class CachedStreamlink(Streamlink):
         self.http = CachedHTTPSession()
 
 
-class PluginYuppTV(PluginSteamlink):
-
+class PluginZattoo(PluginSteamlink):
 
     def getName(self):
-        return 'yupptv'
+        return 'zattoo'
 
-    cookies = {}
+    # restore the streams from json
+    all_streams = {}
+    streams_file = ""
+    settings = {}
+    zattoo_plugin = None
 
-    
     def __init__(self, settings):
-        self.streamlink_session = CachedStreamlink()       
+        self.streamlink_session = Streamlink()
+        settings['stream-types'] = Zattoo.STREAMS_ZATTOO
         super().__init__(settings)
-        self.cookies = {"BoxId":settings['boxid'],"YuppflixToken":settings['yuppflixtoken']}
-        
-     
+        self.zattoo_plugin = self.streamlink_session.get_plugins(
+        )['zattoo']("https://zattoo.com/channels?channel=test")
+        self.zattoo_plugin._hello()
+        self.zattoo_plugin._login(settings['email'], settings['password'])
+        assert(self.zattoo_plugin._authed)
+       # quit()
+#            self._hello()
+ #           self._login(email, password)
+  #      assert(self._authed)
+
     # refresh the streams for a specific channel if they are outdated. Returns none if nothing was updated
     def _refresh_streams(self, channel_name):
         if(channel_name not in self.all_streams or self.all_streams[channel_name]["expiry"] < datetime.now().timestamp()+600):
-            logger.info("%s refresh streams" % channel_name)
+            log.info("%s refresh streams" % channel_name)
             return self._get_streams(channel_name)
         else:
-            logger.debug("%s streams still current" % channel_name)
+            log.debug("%s streams still current" % channel_name)
             return None
 
     # get the streams for a specific channel
@@ -76,8 +86,12 @@ class PluginYuppTV(PluginSteamlink):
         try:
 
             # todo: take this from the epg/channels crawler
-            page_url = "https://www.yupptv.com/channels/"+channel_name+"/live"
+            page_url = "https://zattoo.com/channels?channel="+channel_name
+            print(page_url)
+            log.info("call streamlink")
             channel_streams = self.streamlink_session.streams(page_url)
+            print("channel_streams")
+            print(channel_streams)
             stream_url = channel_streams['best'].to_manifest_url()
             if(stream_url == None):
                 stream_url = channel_streams['best'].url
@@ -87,10 +101,12 @@ class PluginYuppTV(PluginSteamlink):
             params = parse_qs(parsed_uri.query)
             expiry = -1
             if("hdnts" in params):
-                hdnts = dict(s.split('=') for s in params["hdnts"][0].split("~"))
+                hdnts = dict(s.split('=')
+                             for s in params["hdnts"][0].split("~"))
                 expiry = int(hdnts["exp"])
             elif("hdntl" in params):
-                hdntl = dict(s.split('=') for s in params["hdntl"][0].split("~"))
+                hdntl = dict(s.split('=')
+                             for s in params["hdntl"][0].split("~"))
                 expiry = int(hdntl["exp"])
             elif ("e" in params):
                 expiry = int(params["e"][0])
@@ -105,12 +121,60 @@ class PluginYuppTV(PluginSteamlink):
             }
             self.update_all_streams_cache(self.all_streams)
             return channel_streams
-        except PluginError as e:
-            logger.error(e)
+        except StreamError as e:
+            raise e
+            log.error(e)
+            quit()
+
+    last_lineup_refresh = 0
+    channel_lineup = {}
+
+    def get_all_channels(self):
+        if(self.last_lineup_refresh < datetime.now().timestamp()-3600):
+            # mostly copied from  _get_params_cid in https://github.com/streamlink/streamlink/blob/master/src/streamlink/plugins/zattoo.py
+            log.debug('refresh all channel IDs for {0}'.format(self.getName()))
+            res = self.zattoo_plugin.session.http.get(
+                f'{self.zattoo_plugin.base_url}/zapi/v3/cached/{self.zattoo_plugin._session_attributes.get("power_guide_hash")}/channels',
+                headers=self.zattoo_plugin.headers,
+                params={'details': 'False'}
+            )
+            # todo: figure out how to get english groups
+            data = res.json()
+            groups = data['groups']
+            print(len(data['channels']))
+            channels = list(
+                filter(
+                    lambda channel:
+                    len(
+                        list(filter(
+                            lambda quality: quality['availability'] == "available", channel['qualities']))
+                    ) > 0,
+                    data['channels']
+                )
+            )
+
+            channel_list = {}
+            # loop over channels
+            for channel in channels:
+                #channel = channels[idx]
+                canonical_name = channel['display_alias']
+                display_name = channel['title']
+                channelNo = channel['number']
+                logo = "https://images.zattic.com/logos/%s/black/140x80.png" % (
+                    channel['qualities'][0]['logo_token'])
+                section_name = groups[channel['group_index']]['name']
+                url = "https://zattoo.com/channels?channel=%s" % canonical_name
+                channel_list[canonical_name] = {
+                    "display_name": display_name, "channelNo": channelNo, "logo": logo, "group": section_name, "url": url}
+
+            print(channel_list)
+            self.channel_lineup = channel_list
+        return self.channel_lineup
+
 
 
     def get_channel_language(self, channel_name):
-        epg_file = "tmp/yupptv-epg.json"
+        epg_file = "epg.json"
         epg = {}
         if os.path.isfile(epg_file):
             json_file = open(epg_file)
@@ -123,12 +187,12 @@ class PluginYuppTV(PluginSteamlink):
     # todo: we should know the url here
     def get_epg_programme(self, channel_name):
 
-        page_url = "https://www.yupptv.com/channels/"+channel_name+"/live"
+        page_url = "https://www.zattoo.com/channels/"+channel_name+"/live"
         filename = channel_name+".html"
         self._downloadFile("tmp/"+filename, page_url)
         raw = open("tmp/"+filename, "r").read()
         chanid = re.search('chanid = \'(\d+)\'', raw).group(1)
-        epg_file = "tmp/yupptv-epg.json"
+        epg_file = "epg.json"
         epg = {}
         refreshed = False
         if os.path.isfile(epg_file):
@@ -139,7 +203,7 @@ class PluginYuppTV(PluginSteamlink):
                 (len(epg[channel_name]["Programs"]) > 0 and datetime.fromtimestamp(int(epg[channel_name]["Programs"][0]["endTime"])/1000) < datetime.now())):
             refreshed = True
             url = 'https://epg.api.yuppcdn.net' + '/epg/now?tenantId=3&channelIds=' + chanid
-            r = requests.get(url,  cookies=self.cookies)
+            r = requests.get(url,  settings=self.settings)
             epg_data = r.json()[0]
 
             endTime = datetime.fromtimestamp(0)
@@ -153,12 +217,11 @@ class PluginYuppTV(PluginSteamlink):
                 json.dump(epg, outfile, sort_keys=True, indent=4)
         else:
             epg_data = epg[channel_name]
-        print(epg_data)
-        print(refreshed)
+
         dummyTitle = "Program@"
         if(len(epg_data['Programs']) > 0 and epg_data['Programs'][0]['name'][0:len(dummyTitle)] != dummyTitle):
             programme = epg_data['Programs'][0]
-            logger.info("Refreshing EPG for %s" % channel_name)
+            log.info("Refreshing EPG for %s" % channel_name)
             # add programme tag
             programmeElem = etree.Element("programme")
 
@@ -186,94 +249,7 @@ class PluginYuppTV(PluginSteamlink):
 
             icon_elem = etree.SubElement(programmeElem, "icon")
             icon_elem.set("src", programme['thumbnailUrl'])
-            
+
             return programmeElem, refreshed
 
         return None, False
-
-    def get_all_channels(self):
-        channelNo = 0
-        channels = {}
-
-        url = 'https://www.yupptv.com/livetv'
-        filename = "index.html"
-        self._downloadFile("tmp/"+filename, url)
-        raw = open("tmp/"+filename, "r").read()
-        links = re.findall(
-            '<a href=\'https://www.yupptv.com/channels/(.*)/live\' onclick="sendData\(localStorage.getItem\(\'page\'\),\'(.*)\' ,localStorage', raw)
-        sections = ['ent-1', 'movies', 'music-1',
-                    'music-unlimited---live', 'business-1', 'news']
-
-        for link in links:
-            section = link[1]
-
-            if (section != "trending" and section != "recently-watched-live" and section not in sections):
-                sections.append(section)
-
-        for section in sections:
-            if (section != "trending" and section != "recently-watched-live"):
-                page = 0
-                count = 0
-                last_index = 0
-                section_name = ""
-                while(count > 0 or page == 0):
-
-                    raw = ""
-
-                    if(page == 0):
-                        url = "https://www.yupptv.com/livetv/sections/"+section
-                        filename = "index"+section+".html"
-                        self._downloadFile("tmp/"+filename, url)
-
-                    else:
-                        url = "https://www.yupptv.com/livetv/sectionGetMore/" + \
-                            section+"/"+str(last_index)
-                        filename = "index"+section+"-"+str(last_index)+".html"
-                        self._downloadFile("tmp/"+filename, url)
-
-                    raw = open("tmp/"+filename, "r").read()
-
-                    root = etree.fromstring(raw, html_parser)
-                    paging_selector = CSSSelector('div.last-index')
-                    count = int(paging_selector(root)[0].get('data-count'))
-                    last_index = int(paging_selector(
-                        root)[0].get('data-last-index'))
-
-                    logger.info("------------------")
-                    logger.info("%s page %i, count %i, last index %i" %
-                                (section, page, count, last_index))
-                    if(page == 0):
-                        section_selector = CSSSelector('h1.section-heading')
-                        section_name = section_selector(root)[0].text
-                        link_selector = CSSSelector(
-                            'div.livetv-cards a[href$="/live"]')
-                    else:
-                        link_selector = CSSSelector('a[href$="/live"]')
-                    img_selector = CSSSelector('img.vert-horz-center')
-                    premium_selector = CSSSelector('div.premiumicon')
-
-                    page += 1
-                    # loop over channels
-                    for link in link_selector(root):
-                        available = len(premium_selector(link)) == 0
-
-                        img = img_selector(link)[0]
-                        url = link.get('href')
-                        logo = img.get('data-src')
-                        canonical_name = url[len(
-                            "https://www.yupptv.com/channels/"):-len("/live")]
-                        if(available and canonical_name not in channels):
-
-                            channelNo += 1
-
-                            def rchop(s, suffix):
-                                if suffix and s.endswith(suffix):
-                                    return s[:-len(suffix)]
-                                return s
-                            display_name = rchop(img.get('alt'), ' Online')
-
-                            language = self.get_channel_language(
-                                canonical_name)
-                            channels[canonical_name] = {
-                                "display_name": display_name, "channelNo": channelNo, "logo": logo, "group": section_name+";"+language, "url": url}
-        return channels

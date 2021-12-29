@@ -5,7 +5,8 @@ from itertools import chain
 from functools import partial
 from flask import Flask, Response, request, jsonify, abort, render_template
 from gevent.pywsgi import WSGIServer
-import logging
+
+import sys
 import os
 import socket
 import json
@@ -13,7 +14,30 @@ import time
 import threading
 from datetime import timezone, datetime, timedelta
 from plugin_yupptv import PluginYuppTV
+from streamlink.logger import StreamlinkLogger
+from plugin_zattoo import PluginZattoo
 
+import logging
+level = "trace"
+
+logging.basicConfig(
+        level=level,
+        style="{",
+        format=("[{asctime}]" if level == "trace" else "") + "[{name}][{levelname}] {message}",
+        datefmt="%H:%M:%S" + (".%f" if level == "trace" else "")
+    )
+logging.setLoggerClass(StreamlinkLogger)
+
+logging.basicConfig(
+        level=level,
+        style="{",
+        format=("[{asctime}]" if level == "trace" else "") + "[{name}][{levelname}] {message}",
+        datefmt="%H:%M:%S" + (".%f" if level == "trace" else "")
+    )
+log = logging.getLogger(__name__)
+
+root = logging.getLogger("streamlink")
+root.setLevel("trace")
 
 #########################
 # vMVPD Headend
@@ -21,18 +45,23 @@ from plugin_yupptv import PluginYuppTV
 # A vMVPD proxy and server
 #########################
 
-yupptv_cookies = dict(BoxId="***REMOVED***",
-                      YuppflixToken="***REMOVED***")
+yupptv_settings = dict(boxid="***REMOVED***",
+                      yuppflixtoken="***REMOVED***")
+
+
+zattoo_settings = dict(email="***REMOVED***",
+                      password="***REMOVED***")
 plugins = {}
-plugins["yupptv"] = PluginYuppTV(yupptv_cookies)
+plugins["yupptv"] = PluginYuppTV(yupptv_settings)
+plugins["zattoo"] = PluginZattoo(zattoo_settings)
 
 
 # setup a few more things
 app = Flask(__name__)
 
 # setup logging
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger()
+#logging.basicConfig(level=-1)
+
 
 def _file_age_in_seconds(pathname):
     return time.time() - os.path.getmtime(pathname)
@@ -40,16 +69,18 @@ def _file_age_in_seconds(pathname):
 
 
 def _data_refresh_loop():
-    global first_run
-    first_run = True
     while True:
-        plugins['yupptv'].refresh_epg_xmltv()
-        plugins['yupptv'].refresh_channels_playlist()
-        plugins['yupptv'].refresh_streams()
 
-        logger.info('wait 60 seconds')
+
+        plugins['zattoo'].refresh_channels_playlist()
+        #print(plugins['zattoo'].get_channels_playlist())
+        #quit()
+       # plugins['yupptv'].refresh_channels_playlist()
+       # plugins['yupptv'].refresh_epg_xmltv()
+       # plugins['yupptv'].refresh_streams()
+
+        log.info('wait 60 seconds')
         time.sleep(60)
-        first_run = False
 
 
 def start_data_loop():
@@ -76,11 +107,11 @@ def read_stream(stream, prebuffer, chunk_size=16048):
         for data in stream_iterator:
             yield data
     except OSError as err:
-        logger.info(f"Error when reading from stream: {err}, exiting")
+        log.info(f"Error when reading from stream: {err}, exiting")
         os.exit()
     finally:
         stream.close()
-        logger.info("Stream ended")
+        log.info("Stream ended")
 
 @app.route('/<provider>/epg.xml')
 def channel_epg(provider):
@@ -94,7 +125,7 @@ def channel_listing(provider):
 
 @app.route('/<provider>/<channel>')
 def video_feed(provider, channel):
-    logger.info("got stream request for %s-%s" % (provider, channel))
+    log.info("got stream request for %s-%s" % (provider, channel))
 
     stream = plugins[provider].get_stream(channel)
     stream_fd, prebuffer = plugins[provider].open_stream(stream)
@@ -104,6 +135,6 @@ def video_feed(provider, channel):
 
 if __name__ == '__main__':
     http = WSGIServer(('', 5005),
-                      app.wsgi_app, log=logger, error_log=logger)
+                      app.wsgi_app, log=log, error_log=log)
     start_data_loop()
     http.serve_forever()
