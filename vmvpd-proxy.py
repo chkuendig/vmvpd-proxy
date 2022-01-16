@@ -129,7 +129,7 @@ def video_feed(provider, channel):
 
     stream = plugins[provider].get_stream(channel)
     stream_fd, prebuffer = plugins[provider].open_stream(stream)
-
+    log.debug("Writing stream to player")
     return Response(read_stream(stream_fd, prebuffer), mimetype='video/unknown')
 
 

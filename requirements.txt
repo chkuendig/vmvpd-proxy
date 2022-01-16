@@ -1,4 +1,5 @@
 Flask
+cssselect
 requests
 streamlink
 gevent

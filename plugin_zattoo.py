@@ -60,7 +60,8 @@ class PluginZattoo(PluginSteamlink):
 
     def __init__(self, settings):
         self.streamlink_session = Streamlink()
-        settings['stream-types'] = Zattoo.STREAMS_ZATTOO
+        settings['stream-types'] = ['hls7']
+       # settings['stream-types'] = Zattoo.STREAMS_ZATTOO
         super().__init__(settings)
         self.zattoo_plugin = self.streamlink_session.get_plugins(
         )['zattoo']("https://zattoo.com/channels?channel=test")
@@ -91,35 +92,8 @@ class PluginZattoo(PluginSteamlink):
             log.info("call streamlink")
             channel_streams = self.streamlink_session.streams(page_url)
             print("channel_streams")
-            print(channel_streams)
-            stream_url = channel_streams['best'].to_manifest_url()
-            if(stream_url == None):
-                stream_url = channel_streams['best'].url
-
-            # get expiry
-            parsed_uri = urlparse(stream_url)
-            params = parse_qs(parsed_uri.query)
-            expiry = -1
-            if("hdnts" in params):
-                hdnts = dict(s.split('=')
-                             for s in params["hdnts"][0].split("~"))
-                expiry = int(hdnts["exp"])
-            elif("hdntl" in params):
-                hdntl = dict(s.split('=')
-                             for s in params["hdntl"][0].split("~"))
-                expiry = int(hdntl["exp"])
-            elif ("e" in params):
-                expiry = int(params["e"][0])
-            else:
-                expiry = datetime.now().timestamp()+3600*24
-
-            # update streams
-            self.all_streams[channel_name] = {
-                "url": stream_url,
-                "streams": channel_streams,
-                "expiry": expiry
-            }
-            self.update_all_streams_cache(self.all_streams)
+            #print(json.dumps(channel_streams['best']))
+            
             return channel_streams
         except StreamError as e:
             raise e
