@@ -1,6 +1,8 @@
 
 from gevent import monkey
 monkey.patch_all()
+
+from dotenv import load_dotenv
 from itertools import chain
 from functools import partial
 from flask import Flask, Response, request, jsonify, abort, render_template
@@ -36,6 +38,7 @@ logging.basicConfig(
     )
 log = logging.getLogger(__name__)
 
+load_dotenv(verbose=True)
 root = logging.getLogger("streamlink")
 root.setLevel("trace")
 
@@ -45,12 +48,12 @@ root.setLevel("trace")
 # A vMVPD proxy and server
 #########################
 
-yupptv_settings = dict(boxid="***REMOVED***",
-                      yuppflixtoken="***REMOVED***")
+yupptv_settings = dict(boxid=os.environ.get('YUPPTV_BOXID'),
+                      yuppflixtoken=os.environ.get('YUPPTV_YUPPFLIXTOKEN'))
 
 
-zattoo_settings = dict(email="***REMOVED***",
-                      password="***REMOVED***")
+zattoo_settings = dict(email=os.environ.get('ZATTOO_EMAIL'),
+                      password=os.environ.get('ZATTOO_PASSWORD'))
 plugins = {}
 plugins["yupptv"] = PluginYuppTV(yupptv_settings)
 plugins["zattoo"] = PluginZattoo(zattoo_settings)

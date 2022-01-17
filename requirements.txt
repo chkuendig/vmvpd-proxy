@@ -1,5 +1,6 @@
 Flask
 cssselect
+python-dotenv
 requests
-streamlink
+git+https://github.com/chkuendig/streamlink
 gevent

@@ -34,7 +34,7 @@ class PluginVMVPD:
         global downloadCount
         if (not os.path.isfile(filename) or self._file_age_in_seconds(filename) > MAX_FILE_AGE):
 
-            r = requests.get(url,  cookies=cookies)
+            r = requests.get(url,  cookies=self.cookies)
             open(filename, 'wb').write(r.content)
 
     def get_stream(self,channel):
@@ -74,7 +74,7 @@ class PluginVMVPD:
         logger.info("Getting playlist for %s" % self.getName())
         playlist_file = "tmp/"+self.getName()+".m3u"
         if (not os.path.isfile(playlist_file) or self._file_age_in_seconds(playlist_file) > 60*60):
-            return self.refresh_channels_playlist(self.getName())
+            return self.refresh_channels_playlist()
         else:
             return open(playlist_file, "r").read()
 
