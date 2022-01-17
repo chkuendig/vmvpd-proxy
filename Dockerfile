@@ -1,5 +1,10 @@
 FROM python:3-slim
 
+# install git; needed for pip if the repo git dependencies
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends git && \
+    apt-get purge -y --auto-remove && \
+    rm -rf /var/lib/apt/lists/*
 # Sample from https://hub.docker.com/_/python
 
 WORKDIR /usr/src/app
