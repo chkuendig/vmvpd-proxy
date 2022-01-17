@@ -2,6 +2,7 @@ import requests
 import re
 import time
 import os
+from pathlib import Path
 
 import logging
 logger = logging.getLogger()
@@ -32,9 +33,12 @@ class PluginVMVPD:
 
     def _downloadFile(self, filename, url):
         global downloadCount
-        if (not os.path.isfile(filename) or self._file_age_in_seconds(filename) > MAX_FILE_AGE):
+        filepath = Path(filename)
+        if (not filepath.exists() or self._file_age_in_seconds(filename) > MAX_FILE_AGE):
 
             r = requests.get(url,  cookies=self.cookies)
+            if(not filepath.parent.exists()):
+                filepath.parent.mkdir(parents=True)
             open(filename, 'wb').write(r.content)
 
     def get_stream(self,channel):
